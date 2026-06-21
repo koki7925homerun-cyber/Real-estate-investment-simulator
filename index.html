@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#2B4A78" />
+<title>不動産投資シミュレーター（新築RC）</title>
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIuS4jeWLleeUo+aKleizh+OCt+ODn+ODpeODrOODvOOCv+ODvO+8iOaWsOeviVJD77yJIiwgInNob3J0X25hbWUiOiAi5LiN5YuV55Sj5oqV6LOHIiwgInN0YXJ0X3VybCI6ICIuIiwgInNjb3BlIjogIi4iLCAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwgIm9yaWVudGF0aW9uIjogInBvcnRyYWl0IiwgImJhY2tncm91bmRfY29sb3IiOiAiI0U3RThFQSIsICJ0aGVtZV9jb2xvciI6ICIjMkI0QTc4IiwgImljb25zIjogW3sic3JjIjogImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBZ0FBQUFJQUNBWUFBQUQwZU5UNkFBQVVBVWxFUVZSNG5PM2QyM0ZVUjdzRzRNYTFyNTBJcWhJSmtBQzZKeFpFQU1peGNDOG5zQk9BS2ptUm5ZRDNoUmtZUm5OWWh6NS96MVAxMSs4Q3lWcXJoWG5mL25yTjZFMmlTMjgvZlBxMzlUVUE1UExQMzMrOWFYME4vTTQzcEJFQkQvQ0xnbENmQmE5QTJBT3NweFNVWlhFTEVQZ0ErU2tFZVZuTURBUStRSDBLd1Q0V2J5T2hEOUFQWldBOUM3YUMwQWZvbnpLd2pFVzZRZWdEakVzWnVNekNYQ0Q0QWVhaENMeG1RWTRJZllENUtRUC9zUWhKOEFORUZMMEloTDU1d1E5QTFDSVE4cVlGUHdDbm9oV0JVRGNyK0FHNEpVb1JDSEdUZ2grQXRXWXZBbiswdm9EU2hEOEFXOHllSDlPMm05bS9jUURVTStNMFlMb2JFdndBbERKVEVaanFDRUQ0QTFEU1REa3pSWk9aNlJzQ3dCaEdud1lNUHdFUS9nQzBNSHIrREYwQVJsOThBTVkyY2c0Tk9iNFllY0VCbU5Ob1J3TERUUUNFUHdBOUdpMmZoaW9Bb3kwdUFMR01sRk5EakN0R1dsQUFTS24vSTRIdUp3RENINEFSOVo1ZlhSZUEzaGNQQUs3cE9jZTZMUUE5THhvQUxOVnJublZaQUhwZExBRFlvc2RjNjY0QTlMaElBTEJYYi9uV1ZRSG9iWEVBSUtlZWNxNmJBdERUb2dCQUtiM2tYUmNGb0pmRkFJQWFlc2k5NWdXZ2gwVUFnTnBhNTEvVEF0RDY1Z0dncFpZNTJLd0FDSDhBYUplSFRRcUE4QWVBWDFya1l2VUNJUHdCNExYYStWaTFBQWgvQUxpc1prNVdLd0RDSHdCdXE1V1hWUXFBOEFlQTVXcmtadlAzQVFBQTZpdGVBT3orQVdDOTB2bFp0QUFJZndEWXJtU09GaXNBd2g4QTlpdVZwNTRCQUlDQWloUUF1MzhBeUtkRXJtWXZBTUlmQVBMTG5hOVpDNER3QjRCeWN1YXNad0FBSUtCc0JjRHVId0RLeTVXM1dRcUE4QWVBZW5Ma3JpTUFBQWhvZHdHdyt3ZUErdmJtcndrQUFBUzBxd0RZL1FOQU8zdHllSE1CRVA0QTBON1dQSFlFQUFBQmJTb0FkdjhBMEk4dHVXd0NBQUFCclM0QWR2OEEwSisxK1d3Q0FBQUJyU29BZHY4QTBLODFPVzBDQUFBQnZWbjZnWGIvQUpUeTh2eDA4ZmZ1SGg0clhza2Mvdm43cjV2NS9qODFMZ1FBVGwwTC9Vc2Zwd3prcytnSXdPNGZnSnlXaG4rdXo0dG1TVzU3QmdDQXF2YUd1QktRaHdJQVFEVzV3bHNKMk8vbVF3TEcvd0RrY0N1MHYzNSs5K3JYUG43NWR2VnpQQk53M2JXSEFSVUFBSXE3RnY3bmd2L1V0U0tnQkZ5MnVRQUlmd0N1ZVhsK3VsL3dZZC9QL2VLUzREOTFwUWpjdkk2N2g4ZXoxekc3U3lYQXl3QUJXRzFoOEhmbGNNMVJpOEFwQlFDQXhYSUYvNWJkLytIemJqMFhjSXNpOEorTHJ3SXcvZ2ZnMk1id3J4V3lxNy9PaUZPTUxTN2x1WmNCQW5CVHpyRGN1dnZQOWZuSG9wU0FjeFFBQUs2YVBTUm52NzlMemhZQTQzOEFtTWU1WERjQkFPQ2lLTHZqS1BkNXpLc0FBQ2doOUJQMkkzZzFBVEQrQnlDbFhidmlxK0cvOTJWOGV6Ly9rdG1uQUtmNWJnSUFRQzR0ZC8xVGgzY0puZ0VBSUlkVjRiOTFGMTlxOXgrUkFnREFYczc3Qi9UYkVZRHpmd0JXMkJYOGg5MzgzcDhHbUl6L0Yzdjc0ZE8vaHg4T1pBSUFnYjA4UDcxdmZRME1LOXV1LytPWGJ4Y0QvdHJ2L1NEOE4vSVFJQVIwSFB5SGY3NTdlUHpmZGxmRVlJcU0vRGVjN3d2L0hVd0FJSmhMdTM3VEFCYjRudm81N3hmK08vMmNBRGovaDdrdENYalRBSzdvSmZoVEV2NjdISjREY0FRQWs5dXlzMWNFT0NIOEorUUlBQ2EyZDZ6dldDQzhXaVAvVzZGK2YvUS9NakVCZ0FubERHN1RnSmhlbnA5cWZKbjdDLzlNQlFvQVRLVGtqbDBSaUtOQitOUEFtNVE4QUFnenFEbXVWd0xtSlBoVHVudDQ3T2w1aDZKTUFHQndMYzdwVFFQbUkvempVUUJnVUQwOG9LY0lqSzlTOEtjay9MdmpWUUF3b0I3Qy8xaHYxOE15RlhmOXdyOURKZ0F3a0o2RDFqUmdMRWIrS0FBd2dKNkQvNVFpMERjamZ3NGNBVURuUmdyL1k2TmU5OHlNL0RsbUFnQ2RtaUZBVFFQNlllVFBxVCs4QndEMFo0YndQemJiL1l6azVmbEorSE9XQ1FCMFpPYWdOQTJvVC9CempRSUFIWmc1K0U4cEFuVUlmMjd4RUNBMEZpbjhqMFc5NzlLTS9GbktCQUFhRVlDbUFia0pmdFpRQUtBeXdmK2FJckNmOEdjdFJ3QlFrZkMvenZxc1Yybms3N1g5RXpJQmdBb0UyM0ttQWN2WjliT0hBZ0FGQ2Y3dEZJSHJoRDk3T1FLQVFvUi9IdGJ4ZHpWRy9uY1BqK251NGJIbzE2QTlFd0RJVEdEbFp4cndueHE3ZnNFZmh3SUFtUWorOHFJV2dWby93VS80eCtJSUFESVEvblZGV3U5YXUzN2hINDhKQU93UUtZaDZFMkVhWU9SUFNRb0FiQ0Q0K3pGakVURHlwd1pIQUxDUzhPL1RMTjhYSTM5cU1RR0FoV1lKbUptTlBnMHc4cWNtQlFCdUVQempHYTBJR1BuVGdpTUF1RUw0ajIyRTc1K1JQNjJZQU1BWkl3UUh5L1E4RFREeXB5VUZBSTRJL25uMVZBU00vT21CSXdENFFmakgwUHI3Yk9SUEwwd0FDSzkxSUZCZnEybUFrVDg5VVFBSVMvQlRxd2dJZm5ya0NJQ1FoRC9IU3Y1NUVQNzB5Z1NBVUFRL2w2eWRCbHdMOXJ1SFJ3LzYwVDBGZ0JBRVAwdGRLd0pMUTkydW54RTRBbUI2d3A4dFR2L2MxTnJSTHlIOHljRUVnR2tKZnZZNitqUFUvTDBERG9RL3VTZ0FURWZ3VTBEeklpRDR5VTBCWUNyQ244TGVwNk1TOFBYenUxY2Y4UEhMdCt4ZlZQaFRnZ0xBRkFRL0ZiMVBLYVd2bjkrZG5RWWNTa0d1SWlEOEtjVkRnQXhQK05QQ3h5L2ZydjY1Ky9yNTNka0p3UXIzd3ArU1RBQVlsdUNudFVNSnVEUU4yT0UrcFpSZW5wL3VVMHJwN3VIeGUrWi9QNlEzYno5OCtyZjFSY0FhZ3A5ZVhTb0NLNDhEN2kvOVJ1MGljQ2dna1VRcVc0NEFHSXJ3cDJlM2pnVnV1RTlYd2orbG1JRk1PUW9BUTNoNWZub3YvQm5CeHkvZjNwOFdnUVhQQWl3T2RpV0FYRHdEUU5lRVBxTmErSHpBcGpCL2VYNjZqelNxcGd3VEFMb2wvSm5Cem1NQktNWUVnTzRJZm1aelZBS3l2VnJBRklDOUZBQzZJZmdKb1BsYkNzT0JJd0M2SVB3SkpzdWZkdzhFc29jSkFFMEpmZ0o3bjFMNk02WDBmNjB2aEpnVUFKb1EvUERUbnovK1h4R2dLa2NBVkNmODRhdy9iMzhJNUdNQ1FEV0NIMjR5RGFBYUJZRGlCRCtzcGdoUW5DTUFpaEwrc0l0akFZb3hBYUFJd1EvWm1BWlFoQUpBRVhjUGo5N29oS3BlbnA5YVg4STFYcTlQZHhRQVlHaWRCMzlLd3A5T0tRREFzQnFFLzNHWVgzc2ZmcUZQOXhRQVlEaU5nLy9hcjhFd3ZBb0FHRW9uNFEvRE13RUFoaUQ0SVM4VEFLQjd3aC95TXdFQXVpWDRvUndGQU9pTzRJZnlIQUVBWFJIK1VJY0pBTkFGd1E5MW1RQUF6UWwvcU04RUFHaEc4RU03Q2dCUW5lQ0g5aHdCQUZVSmYraURDUUJRaGVDSHZwZ0FBTVVKZitpUENRQlFqT0NIZnBrQUFFWFVEdis3aDhlcVh3OUdad0lBWkNYNFlRd0tBSkNGNElleE9BSUFkaFArTUI0VEFHQXp3US9qTWdFQU5oSCtNRFlUQUdBVndROXpVQUNBUlFRL3pNVVJBSENUOElmNW1BQUFGd2wrbUpjSkFIQ1c4SWU1bVFCQUVOY0MvVGg4QlQvRW9BREF4SmFHZVlNZjJwTlNFdjdRa2dJQWsyb1Y2a3NJZm1oUEFZQUo5UnIrZ2gvNjRTRkFtSXp3QjVZd0FZQ0ozQXIvcjUvZnZmcTFqMSsrbGJtWUh3US85RWtCZ0VsY0MvOXp3WC82ZXlXS2dQQ0hmaWtBMExtWDU2ZjdCUi8yL2R3dlhnditTeCtib3dnSWZ1aWZBZ0NkV2hqOHZUbGM4OWxDQXZSREFZRE81QXIrTmJ2LzA4L2JPQVg0ZWQySGU3aDdlRlFFb0ZOZUJRQWQyUmorclVQMlBoMkYvN0ZCcHhnUWdnSUFuY2dabGx0My94cysvK1kxS3dIUUp3VUFPakJnU0Y3YzlaOHo0UDNCOUJRQVlDMWhEaE5RQUtDeEhidmo3Nm4rK2YvbThEY0ZnTDRvQURDbTFnLytBWU5UQUtDaERidmlSYnYrdlcvbVUrcnRnVTBCb0I4S0FJeWo5YTVmZU1ORUZBRG8zNmF6L3EyNytOSS9IQWpvZ3dJQWZXdTk2d2NtNWEyQW9VOVpndit3bTEveXhqNDNkdjdHL3pBWkJRRDZrMzNYZjYwSUxCajVDMytZa0FJQS9TZys3dDl3dmkvOFlWS2VBWUErOUhqV0wveGhZaVlBMEZhUHdaK1M4SWZwbVFCQUl5L1BUNjB2NFJMaER3R1lBRUJsbFlQL09NeXZUUnVFUGdTakFFQWxEWGI4cDZFdTVJR2ZGQUNvb09HdUgrQXNCUUFLNm1EWEQzQ1dBZ0NGMlBVRFBWTUFJRE83Zm1BRUNnQmtaTmNQakVJQmdBenMrb0hSS0FDd2sxMC9NQ0lGQURheTZ3ZEdwZ0RBQm5iOXdPZ1VBRmpCcmgrWWhRSUFDOW4xQXpOUkFPQUd3US9NeUk4RGhpdUVQekFyRXdBNFEvQURzek1CZ0JQQ0g0akFCQUIrcUJuOGR3K1AxYjhtd0RFRmdQQnFoL0FoL0FGYVVnQUlyY1d1SDZBSENnQWgyZlVEMFNrQWhHUFhENkFBRUloZFA4QXZDZ0FoMlBVRC9FNEJZR3AyL1FEbktRQk15NjRmNERJRmdPblk5UVBjcGdBd0ZidCtnR1VVQUtaZzF3K3dqZ0pBdDY2RituRUEyL1VEcktjQTBKV2xZVzdIRDdDUEh3ZE1OM3I5eVhqQ0g1aVJDUUJkNkRIOEJUOHdNeE1BbWhQK0FQV1pBTkRVcmZELyt2bmRxMS83K09WYm1ZdEpnaCtJUXdHZ21XdmhmeTc0VDM4dmR4RVEva0FrQ2dEWnZUdy8zUy80c08vbmZ2RmE4Ri82MkwxRlFQQURFU2tBWkxNdytIdHovL0w4bE80ZUhzOFdFb0JaS1FEc2xpdjQxK3orVHo5dnd4VGd0MnMrM0lNaUFFVGhWUURzc2pIOFc0ZnN4V3NlZElvQnNKb0N3R1k1dzNMcjduL2w1OStuSytGL29BUUFFU2dBYkRKZ1NLNjYzZ0h2RDJBVnp3QXdPMEVPY0lZSkFLdEYyUjFIdVU4Z0pnVUFBQUpTQUZpbDFLNTQ3NXY1bEhwN1lGTUFZRllLQUMzVUNsWGhEWENCQWtBM3R1N2lTLzV3SUlCWktRQUFFSkNYQWRMS2ZUcnpqb0NIM2Z5U04vYTVzZk0zL2dlNFFnR2dwYk1sSUtYclJXREJ5Ri80QTl5Z0FORGF4UktRMHFiemZlRVBzSUJuQU9oQnJ0QVcvZ0FMS1FEMFltOTRDMytBRlJRQWVySTF4SVUvd0VxZUFhQTN4MkYrOGRtQUpQUUJkbEVBNkptUUJ5akVFUUFBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQktRQXNNcmR3K1AzMXRkUVUrbjd0WjVqL2Z0N1l6M3ppbmEvQ2dBQUJLUUFzRnFVbGx6clBxM25tRituTmV1WlY1VDdQS1lBQUVCQUNnQ2J6TjZXYTkrZjlSejc2OVZtUGZPYS9mNHVVUURZYk5iL2FGcmRsL1djNCt1V1pqM3ptdlcrbGxBQTJHVzIvM2hhMzAvcnI1OWI2L3RwL2ZWemEzMC9yYjkrYnJQZHoxcHYzbjc0OUcvcmkyQU9MODlQOTYydllhc2UveUt3bm5sWno3eXM1L2dVQUxJYjZTK0dFZjRpc0o1NVdjKzhyT2U0RkFBQUNNZ3pBQUFRa0FJQUFBRXBBQUFRa0FJQUFBRXBBQUFRa0FJQUFBRXBBQUFRa0FJQUFBRXBBQUFRa0FJQUFBRXBBQUFRa0FJQUFBRXBBQUFRa0FJQUFBRXBBQUFRa0FJQUFBRXBBQUFRMEIvLy9QM1htOVlYQVFEVVpRSUFBQUVwQUFBUWtBSUFBQUVwQUFBUWtBSUFBQUVwQUFBUWtBSUFBQUg5a1ZKSzNnc0FBT0w0NSsrLzNwZ0FBRUJBQ2dBQUJLUUFBRUJBQ2dBQUJQU3pBSGdRRUFEbWQ4aDdFd0FBQ0VnQkFJQ0FGQUFBQ09pM0F1QTVBQUNZMTNIT213QUFRRUFLQUFBRXBBQUFRRUN2Q29EbkFBQmdQcWY1YmdJQUFBRXBBQUFRME5rQzRCZ0FBT1p4THRkTkFBQWdJQVVBQUFLNldBQWNBd0RBK0M3bHVRa0FBQVNrQUFCQVFGY0xnR01BQUJqWHRSdzNBUUNBZ0c0V0FGTUFBQmpQcmZ3MkFRQ0FnQlFBQUFob1VRRndEQUFBNDFpUzJ5WUFBQkRRNGdKZ0NnQUEvVnVhMXlZQUFCRFFxZ0pnQ2dBQS9WcVQweVlBQUJEUTZnSmdDZ0FBL1ZtYnp5WUFBQkRRcGdKZ0NnQUEvZGlTeXlZQUFCRFE1Z0pnQ2dBQTdXM040MTBUQUNVQUFOclprOE9PQUFBZ29OMEZ3QlFBQU9yYm03OG1BQUFRVUpZQ1lBb0FBUFhreU4xc0V3QWxBQURLeTVXM2pnQUFJS0NzQmNBVUFBREt5Wm16MlNjQVNnQUE1SmM3WDRzY0FTZ0JBSkJQaVZ6MURBQUFCRlNzQUpnQ0FNQitwZkswNkFSQUNRQ0E3VXJtYVBFakFDVUFBTllyblorZUFRQ0FnS29VQUZNQUFGaXVSbTVXbXdBb0FRQndXNjI4ckhvRW9BUUF3R1UxYzdMNk13QktBQUM4VmpzZm16d0VxQVFBd0M4dGNySFpxd0NVQUFCb2w0ZE5Yd2FvQkFBUVdjc2NiUDQrQUVvQUFCRzF6ci9tQlNDbDlvc0FBRFgxa0h0ZEZJQ1UrbGdNQUNpdGw3enJwZ0NrMU0raUFFQUpQZVZjVndVZ3BiNFdCd0J5NlMzZnVpc0FLZlczU0FDd1I0KzUxbVVCU0tuUHhRS0F0WHJOczI0TFFFcjlMaG9BTE5GempuVmRBRkxxZS9FQTRKTGU4NnZyaXp2MTlzT25mMXRmQXdCYzAzdndIM1EvQVRnMnlxSUNFTk5JT1RWVUFVaHByTVVGSUk3UjhtbW9pejNsU0FDQTFrWUwvb1BoSmdESFJsMTBBT1l3Y2c0TlhRQlNHbnZ4QVJqWDZQa3o5TVdmY2lRQVFHbWpCLy9COEJPQVk3TjhVd0RvMDB3NU04Mk5uRElOQUNDWG1ZTC9ZTG9iT3FVSUFMRFZqTUYvTU5VUndEa3pmL01BS0dmMi9KajY1azZaQmdCd3krekJmeERpSms4cEFnQ2NpaEw4QjZGdTlwUWlBRUMwNEQ4SWVkT25GQUdBZUtJRy8wSG9teitsQ0FETUwzcndIMWlFQzVRQmdIa0kvZGNzeUEyS0FNQzRCUDlsRm1ZRlpRQ2dmMEovR1l1MGtUSUEwQStodjU0RnkwQVpBS2hQNk85ajhRcFFDQUR5RS9oNVdjd0tGQUtBOVFSK1dSYTNFYVVBNEJkaFg5Ly9Bd3pJWmYxU0hqYXZBQUFBQUVsRlRrU3VRbUNDIiwgInNpemVzIjogIjE5MngxOTIiLCAidHlwZSI6ICJpbWFnZS9wbmciLCAicHVycG9zZSI6ICJhbnkgbWFza2FibGUifSwgeyJzcmMiOiAiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFnQUFBQUlBQ0FZQUFBRDBlTlQ2QUFBVUFVbEVRVlI0bk8zZDIzRlVSN3NHNE1hMXI1MElxaElKa0FDNkp4WkVBTWl4Y0M4bnNCT0FLam1SbllEM2hSa1lSbk5ZaHo1L3oxUDExKzhDeVZxcmhYbmYvbnJONkUyaVMyOC9mUHEzOVRVQTVQTFAzMys5YVgwTi9NNDNwQkVCRC9DTGdsQ2ZCYTlBMkFPc3B4U1VaWEVMRVBnQStTa0VlVm5NREFRK1FIMEt3VDRXYnlPaEQ5QVBaV0E5QzdhQzBBZm9uekt3akVXNlFlZ0RqRXNadU16Q1hDRDRBZWFoQ0x4bVFZNElmWUQ1S1FQL3NRaEo4QU5FRkwwSWhMNTV3UTlBMUNJUThxWUZQd0Nub2hXQlVEY3IrQUc0SlVvUkNIR1RnaCtBdFdZdkFuKzB2b0RTaEQ4QVc4eWVIOU8ybTltL2NRRFVNK00wWUxvYkV2d0FsREpURVpqcUNFRDRBMURTVERrelJaT1o2UnNDd0JoR253WU1Qd0VRL2dDME1IcitERjBBUmw5OEFNWTJjZzROT2I0WWVjRUJtTk5vUndMRFRRQ0VQd0E5R2kyZmhpb0FveTB1QUxHTWxGTkRqQ3RHV2xBQVNLbi9JNEh1SndEQ0g0QVI5WjVmWFJlQTNoY1BBSzdwT2NlNkxRQTlMeG9BTE5Wcm5uVlpBSHBkTEFEWW9zZGM2NjRBOUxoSUFMQlhiL25XVlFIb2JYRUFJS2VlY3E2YkF0RFRvZ0JBS2Iza1hSY0ZvSmZGQUlBYWVzaTk1Z1dnaDBVQWdOcGE1MS9UQXRENjVnR2dwWlk1Mkt3QUNIOEFhSmVIVFFxQThBZUFYMXJrWXZVQ0lQd0I0TFhhK1ZpMUFBaC9BTGlzWms1V0t3RENId0J1cTVXWFZRcUE4QWVBNVdya1p2UDNBUUFBNml0ZUFPeitBV0M5MHZsWnRBQUlmd0RZcm1TT0Zpc0F3aDhBOWl1VnA1NEJBSUNBaWhRQXUzOEF5S2RFcm1ZdkFNSWZBUExMbmE5WkM0RHdCNEJ5Y3Vhc1p3QUFJS0JzQmNEdUh3REt5NVczV1FxQThBZUFlbkxrcmlNQUFBaG9kd0d3K3dlQSt2Ym1yd2tBQUFTMHF3RFkvUU5BTzN0eWVITUJFUDRBME43V1BIWUVBQUFCYlNvQWR2OEEwSTh0dVd3Q0FBQUJyUzRBZHY4QTBKKzErV3dDQUFBQnJTb0FkdjhBMEs4MU9XMENBQUFCdlZuNmdYYi9BSlR5OHZ4MDhmZnVIaDRyWHNrYy92bjdyNXY1L2o4MUxnUUFUbDBML1VzZnB3emtzK2dJd080ZmdKeVdobit1ejR0bVNXNTdCZ0NBcXZhR3VCS1Fod0lBUURXNXdsc0oyTy9tUXdMRy93RGtjQ3UwdjM1KzkrclhQbjc1ZHZWelBCTnczYldIQVJVQUFJcTdGdjduZ3YvVXRTS2dCRnkydVFBSWZ3Q3VlWGwrdWwvd1lkL1AvZUtTNEQ5MXBRamN2STY3aDhlejF6RzdTeVhBeXdBQldHMWg4SGZsY00xUmk4QXBCUUNBeFhJRi81YmQvK0h6YmowWGNJc2k4SitMcndJdy9nZmcyTWJ3cnhXeXE3L09pRk9NTFM3bHVaY0JBbkJUenJEY3V2dlA5Zm5Ib3BTQWN4UUFBSzZhUFNSbnY3OUx6aFlBNDM4QW1NZTVYRGNCQU9DaUtMdmpLUGQ1ektzQUFDZ2g5QlAySTNnMUFURCtCeUNsWGJ2aXErRy85MlY4ZXovL2t0bW5BS2Y1YmdJQVFDNHRkLzFUaDNjSm5nRUFJSWRWNGI5MUYxOXE5eCtSQWdEQVhzNzdCL1RiRVlEemZ3QlcyQlg4aDkzODNwOEdtSXovRjN2NzRkTy9oeDhPWkFJQWdiMDhQNzF2ZlEwTUs5dXUvK09YYnhjRC90cnYvU0Q4Ti9JUUlBUjBIUHlIZjc1N2VQemZkbGZFWUlxTS9EZWM3d3YvSFV3QUlKaEx1MzdUQUJiNG52bzU3eGYrTy8yY0FEai9oN2t0Q1hqVEFLN29KZmhURXY2N0hKNERjQVFBazl1eXMxY0VPQ0g4SitRSUFDYTJkNnp2V0NDOFdpUC9XNkYrZi9RL01qRUJnQW5sREc3VGdKaGVucDlxZkpuN0MvOU1CUW9BVEtUa2psMFJpS05CK05QQW01UThBQWd6cURtdVZ3TG1KUGhUdW50NDdPbDVoNkpNQUdCd0xjN3BUUVBtSS96alVRQmdVRDA4b0tjSWpLOVM4S2NrL0x2alZRQXdvQjdDLzFodjE4TXlGWGY5d3I5REpnQXdrSjZEMWpSZ0xFYitLQUF3Z0o2RC81UWkwRGNqZnc0Y0FVRG5SZ3IvWTZOZTk4eU0vRGxtQWdDZG1pRkFUUVA2WWVUUHFUKzhCd0QwWjRid1B6YmIvWXprNWZsSitIT1dDUUIwWk9hZ05BMm9UL0J6alFJQUhaZzUrRThwQW5VSWYyN3hFQ0EwRmluOGowVzk3OUtNL0ZuS0JBQWFFWUNtQWJrSmZ0WlFBS0F5d2YrYUlyQ2Y4R2N0UndCUWtmQy96dnFzVjJuazc3WDlFeklCZ0FvRTIzS21BY3ZaOWJPSEFnQUZDZjd0RklIcmhEOTdPUUtBUW9SL0h0YnhkelZHL25jUGorbnU0YkhvMTZBOUV3RElUR0RsWnhyd254cTdmc0VmaHdJQW1Rais4cUlXZ1ZvL3dVLzR4K0lJQURJUS9uVkZXdTlhdTM3aEg0OEpBT3dRS1loNkUyRWFZT1JQU1FvQWJDRDQrekZqRVREeXB3WkhBTENTOE8vVExOOFhJMzlxTVFHQWhXWUptSm1OUGcwdzhxY21CUUJ1RVB6akdhMElHUG5UZ2lNQXVFTDRqMjJFNzUrUlA2MllBTUFaSXdRSHkvUThEVER5cHlVRkFJNEkvbm4xVkFTTS9PbUJJd0Q0UWZqSDBQcjdiT1JQTDB3QUNLOTFJRkJmcTJtQWtUODlVUUFJUy9CVHF3Z0lmbnJrQ0lDUWhEL0hTdjU1RVA3MHlnU0FVQVEvbDZ5ZEJsd0w5cnVIUncvNjBUMEZnQkFFUDB0ZEt3SkxROTJ1bnhFNEFtQjZ3cDh0VHYvYzFOclJMeUg4eWNFRWdHa0pmdlk2K2pQVS9MMEREb1EvdVNnQVRFZndVMER6SWlENHlVMEJZQ3JDbjhMZXA2TVM4UFh6dTFjZjhQSEx0K3hmVlBoVGdnTEFGQVEvRmIxUEthV3ZuOStkblFZY1NrR3VJaUQ4S2NWRGdBeFArTlBDeHkvZnJ2NjUrL3I1M2RrSndRcjN3cCtTVEFBWWx1Q250VU1KdURRTjJPRStwWlJlbnAvdVUwcnA3dUh4ZStaL1A2UTNiejk4K3JmMVJjQWFncDllWFNvQ0s0OEQ3aS85UnUwaWNDZ2drVVFxVzQ0QUdJcndwMmUzamdWdXVFOVh3aitsbUlGTU9Rb0FRM2g1Zm5vdi9CbkJ4eS9mM3A4V2dRWFBBaXdPZGlXQVhEd0RRTmVFUHFOYStIekFwakIvZVg2Nmp6U3FwZ3dUQUxvbC9KbkJ6bU1CS01ZRWdPNElmbVp6VkFLeXZWckFGSUM5RkFDNklmZ0pvUGxiQ3NPQkl3QzZJUHdKSnN1ZmR3OEVzb2NKQUUwSmZnSjduMUw2TTZYMGY2MHZoSmdVQUpvUS9QRFRuei8rWHhHZ0trY0FWQ2Y4NGF3L2IzOEk1R01DUURXQ0gyNHlEYUFhQllEaUJEK3NwZ2hRbkNNQWloTCtzSXRqQVlveEFhQUl3US9abUFaUWhBSkFFWGNQajk3b2hLcGVucDlhWDhJMVhxOVBkeFFBWUdpZEIzOUt3cDlPS1FEQXNCcUUvM0dZWDNzZmZxRlA5eFFBWURpTmcvL2FyOEV3dkFvQUdFb240US9ETXdFQWhpRDRJUzhUQUtCN3doL3lNd0VBdWlYNG9Sd0ZBT2lPNElmeUhBRUFYUkgrVUljSkFOQUZ3UTkxbVFBQXpRbC9xTThFQUdoRzhFTTdDZ0JRbmVDSDlod0JBRlVKZitpRENRQlFoZUNIdnBnQUFNVUpmK2lQQ1FCUWpPQ0hmcGtBQUVYVUR2KzdoOGVxWHc5R1p3SUFaQ1g0WVF3S0FKQ0Y0SWV4T0FJQWRoUCtNQjRUQUdBendRL2pNZ0VBTmhIK01EWVRBR0FWd1E5elVBQ0FSUVEvek1VUkFIQ1Q4SWY1bUFBQUZ3bCttSmNKQUhDVzhJZTVtUUJBRU5jQy9UaDhCVC9Fb0FEQXhKYUdlWU1mMnBOU0V2N1FrZ0lBazJvVjZrc0lmbWhQQVlBSjlScitnaC82NFNGQW1JendCNVl3QVlDSjNBci9yNS9mdmZxMWoxKytsYm1ZSHdRLzlFa0JnRWxjQy85endYLzZleVdLZ1BDSGZpa0EwTG1YNTZmN0JSLzIvZHd2WGd2K1N4K2Jvd2dJZnVpZkFnQ2RXaGo4dlRsYzg5bENBdlJEQVlETzVBcitOYnYvMDgvYk9BWDRlZDJIZTdoN2VGUUVvRk5lQlFBZDJSaityVVAyUGgyRi83RkJweGdRZ2dJQW5jZ1psbHQzL3hzKy8rWTFLd0hRSndVQU9qQmdTRjdjOVo4ejRQM0I5QlFBWUMxaERoTlFBS0N4SGJ2ajc2bisrZi9tOERjRmdMNG9BRENtMWcvK0FZTlRBS0NoRGJ2aVJidit2Vy9tVStydGdVMEJvQjhLQUl5ajlhNWZlTU5FRkFEbzM2YXovcTI3K05JL0hBam9nd0lBZld1OTZ3Y201YTJBb1U5Wmd2K3dtMS95eGo0M2R2N0cvekFaQlFENmszM1hmNjBJTEJqNUMzK1lrQUlBL1NnKzd0OXd2aS84WVZLZUFZQSs5SGpXTC94aFlpWUEwRmFQd1orUzhJZnBtUUJBSXkvUFQ2MHY0UkxoRHdHWUFFQmxsWVAvT015dlRSdUVQZ1NqQUVBbERYYjhwNkV1NUlHZkZBQ29vT0d1SCtBc0JRQUs2bURYRDNDV0FnQ0YyUFVEUFZNQUlETzdmbUFFQ2dCa1pOY1BqRUlCZ0F6cytvSFJLQUN3azEwL01DSUZBRGF5NndkR3BnREFCbmI5d09nVUFGakJyaCtZaFFJQUM5bjFBek5SQU9BR3dRL015SThEaGl1RVB6QXJFd0E0US9BRHN6TUJnQlBDSDRqQUJBQitxQm44ZHcrUDFiOG13REVGZ1BCcWgvQWgvQUZhVWdBSXJjV3VINkFIQ2dBaDJmVUQwU2tBaEdQWEQ2QUFFSWhkUDhBdkNnQWgyUFVEL0U0QllHcDIvUURuS1FCTXk2NGY0RElGZ09uWTlRUGNwZ0F3RmJ0K2dHVVVBS1pnMXcrd2pnSkF0NjZGK25FQTIvVURyS2NBMEpXbFlXN0hEN0NQSHdkTU4zcjl5WGpDSDVpUkNRQmQ2REg4QlQ4d014TUFtaFArQVBXWkFORFVyZkQvK3ZuZHExLzcrT1ZibVl0SmdoK0lRd0dnbVd2aGZ5NzRUMzh2ZHhFUS9rQWtDZ0RadlR3LzNTLzRzTy9uZnZGYThGLzYyTDFGUVBBREVTa0FaTE13K0h0ei8vTDhsTzRlSHM4V0VvQlpLUURzbGl2NDEreitUejl2d3hUZ3QycyszSU1pQUVUaFZRRHNzakg4VzRmc3hXc2VkSW9Cc0pvQ3dHWTV3M0xyN24vbDU5K25LK0Yvb0FRQUVTZ0FiREpnU0s2NjNnSHZEMkFWendBd08wRU9jSVlKQUt0RjJSMUh1VThnSmdVQUFBSlNBRmlsMUs1NDc1djVsSHA3WUZNQVlGWUtBQzNVQ2xYaERYQ0JBa0EzdHU3aVMvNXdJSUJaS1FBQUVKQ1hBZExLZlRyempvQ0gzZnlTTi9hNXNmTTMvZ2U0UWdHZ3BiTWxJS1hyUldEQnlGLzRBOXlnQU5EYXhSS1EwcWJ6ZmVFUHNJQm5BT2hCcnRBVy9nQUxLUUQwWW05NEMzK0FGUlFBZXJJMXhJVS93RXFlQWFBM3gyRis4ZG1BSlBRQmRsRUE2Sm1RQnlqRUVRQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBQUVCQUNnQUFCS1FBc01yZHcrUDMxdGRRVStuN3RaNWovZnQ3WXozemluYS9DZ0FBQktRQXNGcVVsbHpyUHEzbm1GK25OZXVaVjVUN1BLWUFBRUJBQ2dDYnpONldhOStmOVJ6NzY5Vm1QZk9hL2Y0dVVRRFliTmIvYUZyZGwvV2M0K3VXWmozem12VytsbEFBMkdXMi8zaGEzMC9ycjU5YjYvdHAvZlZ6YTMwL3JiOSticlBkejFwdjNuNzQ5Ry9yaTJBT0w4OVA5NjJ2WWFzZS95S3dubmxaejd5czUvZ1VBTEliNlMrR0VmNGlzSjU1V2MrOHJPZTRGQUFBQ01nekFBQVFrQUlBQUFFcEFBQVFrQUlBQUFFcEFBQVFrQUlBQUFFcEFBQVFrQUlBQUFFcEFBQVFrQUlBQUFFcEFBQVFrQUlBQUFFcEFBQVFrQUlBQUFFcEFBQVFrQUlBQUFFcEFBQVEwQi8vL1AzWG05WVhBUURVWlFJQUFBRXBBQUFRa0FJQUFBRXBBQUFRa0FJQUFBRXBBQUFRa0FJQUFBSDlrVkpLM2dzQUFPTDQ1KysvM3BnQUFFQkFDZ0FBQktRQUFFQkFDZ0FBQlBTekFIZ1FFQURtZDhoN0V3QUFDRWdCQUlDQUZBQUFDT2kzQXVBNUFBQ1kxM0hPbXdBQVFFQUtBQUFFcEFBQVFFQ3ZDb0RuQUFCZ1BxZjViZ0lBQUFFcEFBQVEwTmtDNEJnQUFPWnhMdGROQUFBZ0lBVUFBQUs2V0FBY0F3REErQzdsdVFrQUFBU2tBQUJBUUZjTGdHTUFBQmpYdFJ3M0FRQ0FnRzRXQUZNQUFCalByZncyQVFDQWdCUUFBQWhvVVFGd0RBQUE0MWlTMnlZQUFCRFE0Z0pnQ2dBQS9WdWExeVlBQUJEUXFnSmdDZ0FBL1ZxVDB5WUFBQkRRNmdKZ0NnQUEvVm1ienlZQUFCRFFwZ0pnQ2dBQS9kaVN5eVlBQUJEUTVnSmdDZ0FBN1czTjQxMFRBQ1VBQU5yWms4T09BQUFnb04wRndCUUFBT3JibTc4bUFBQVFVSllDWUFvQUFQWGt5TjFzRXdBbEFBREt5NVczamdBQUlLQ3NCY0FVQUFES3labXoyU2NBU2dBQTVKYzdYNHNjQVNnQkFKQlBpVnoxREFBQUJGU3NBSmdDQU1CK3BmSzA2QVJBQ1FDQTdVcm1hUEVqQUNVQUFOWXJuWitlQVFDQWdLb1VBRk1BQUZpdVJtNVdtd0FvQVFCd1c2MjhySG9Fb0FRQXdHVTFjN0w2TXdCS0FBQzhWanNmbXp3RXFBUUF3Qzh0Y3JIWnF3Q1VBQUJvbDRkTlh3YW9CQUFRV2NzY2JQNCtBRW9BQUJHMXpyL21CU0NsOW9zQUFEWDFrSHRkRklDVStsZ01BQ2l0bDd6cnBnQ2sxTStpQUVBSlBlVmNWd1VncGI0V0J3Qnk2UzNmdWlzQUtmVzNTQUN3UjQrNTFtVUJTS25QeFFLQXRYck5zMjRMUUVyOUxob0FMTkZ6am5WZEFGTHFlL0VBNEpMZTg2dnJpenYxOXNPbmYxdGZBd0JjMDN2d0gzUS9BVGcyeXFJQ0VOTklPVFZVQVVocHJNVUZJSTdSOG1tb2l6M2xTQUNBMWtZTC9vUGhKZ0RIUmwxMEFPWXdjZzROWFFCU0dudnhBUmpYNlBrejlNV2ZjaVFBUUdtakIvL0I4Qk9BWTdOOFV3RG8wMHc1TTgyTm5ESU5BQ0NYbVlML1lMb2JPcVVJQUxEVmpNRi9NTlVSd0RremYvTUFLR2YyL0pqNjVrNlpCZ0J3eSt6QmZ4RGlKazhwQWdDY2loTDhCNkZ1OXBRaUFFQzA0RDhJZWRPbkZBR0FlS0lHLzBIb216K2xDQURNTDNyd0gxaUVDNVFCZ0hrSS9kY3N5QTJLQU1DNEJQOWxGbVlGWlFDZ2YwSi9HWXUwa1RJQTBBK2h2NTRGeTBBWkFLaFA2TzlqOFFwUUNBRHlFL2g1V2N3S0ZBS0E5UVIrV1JhM0VhVUE0QmRoWDkvL0F3eklaZjFTSGphdkFBQUFBRWxGVGtTdVFtQ0MiLCAic2l6ZXMiOiAiNTEyeDUxMiIsICJ0eXBlIjogImltYWdlL3BuZyIsICJwdXJwb3NlIjogImFueSBtYXNrYWJsZSJ9XX0=" />
+<link rel="apple-touch-icon" href="data:image/png;base64,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CgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAAEBACgAABKQAsMrdw+P31tdQU+n7tZ5j/ft7Yz3zina/CgAABKQAsFqUllzrPq3nmF+nNeuZV5T7PKYAAEBACgCbzN6Wa9+f9Rz769VmPfOa/f4uUQDYbNb/aFrdl/Wc4+uWZj3zmvW+llAA2GW2/3ha30/rr59b6/tp/fVza30/rb9+brPdz1pv3n749G/ri2AOL89P962vYase/yKwnnlZz7ys5/gUALIb6S+GEf4isJ55Wc+8rOe4FAAACMgzAAAQkAIAAAEpAAAQkAIAAAEpAAAQkAIAAAEpAAAQkAIAAAEpAAAQkAIAAAEpAAAQkAIAAAEpAAAQkAIAAAEpAAAQkAIAAAEpAAAQ0B///P3Xm9YXAQDUZQIAAAEpAAAQkAIAAAEpAAAQkAIAAAEpAAAQkAIAAAH9kVJK3gsAAOL45++/3pgAAEBACgAABKQAAEBACgAABPSzAHgQEADmd8h7EwAACEgBAICAFAAACOi3AuA5AACY13HOmwAAQEAKAAAEpAAAQECvCoDnAABgPqf5bgIAAAEpAAAQ0NkC4BgAAOZxLtdNAAAgIAUAAAK6WAAcAwDA+C7luQkAAASkAABAQFcLgGMAABjXtRw3AQCAgG4WAFMAABjPrfw2AQCAgBQAAAhoUQFwDAAA41iS2yYAABDQ4gJgCgAA/Vua1yYAABDQqgJgCgAA/VqT0yYAABDQ6gJgCgAA/VmbzyYAABDQpgJgCgAA/diSyyYAABDQ5gJgCgAA7W3N410TACUAANrZk8OOAAAgoN0FwBQAAOrbm78mAAAQUJYCYAoAAPXkyN1sEwAlAADKy5W3jgAAIKCsBcAUAADKyZmz2ScASgAA5Jc7X4scASgBAJBPiVz1DAAABFSsAJgCAMB+pfK06ARACQCA7UrmaPEjACUAANYrnZ+eAQCAgKoUAFMAAFiuRm5WmwAoAQBwW628rHoEoAQAwGU1c7L6MwBKAAC8VjsfmzwEqAQAwC8tcrHZqwCUAABol4dNXwaoBAAQWcscbP4+AEoAABG1zr/mBSCl9osAADX1kHtdFICU+lgMACitl7zrpgCk1M+iAEAJPeVcVwUgpb4WBwBy6S3fuisAKfW3SACwR4+51mUBSKnPxQKAtXrNs24LQEr9LhoALNFzjnVdAFLqe/EA4JLe86vrizv19sOnf1tfAwBc03vwH3Q/ATg2yqICENNIOTVUAUhprMUFII7R8mmoiz3lSACA1kYL/oPhJgDHRl10AOYwcg4NXQBSGnvxARjX6Pkz9MWfciQAQGmjB//B8BOAY7N8UwDo00w5M82NnDINACCXmYL/YLobOqUIALDVjMF/MNURwDkzf/MAKGf2/Jj65k6ZBgBwy+zBfxDiJk8pAgCcihL8B6Fu9pQiAEC04D8IedOnFAGAeKIG/0Homz+lCADML3rwH1iEC5QBgHkI/dcsyA2KAMC4BP9lFmYFZQCgf0J/GYu0kTIA0A+hv54Fy0AZAKhP6O9j8QpQCADyE/h5WcwKFAKA9QR+WRa3EaUA4BdhX9//AwzIZf1SHjavAAAAAElFTkSuQmCC" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="不動産投資" />
+<style>
+  html,body{height:100%;margin:0;background:#E7E8EA;-webkit-text-size-adjust:100%;}
+  #root{min-height:100vh;}
+  @media(pointer:coarse){
+    input[type=range]{height:5px;}
+    input[type=range]::-webkit-slider-thumb{width:24px;height:24px;}
+    input[type=range]::-moz-range-thumb{width:22px;height:22px;}
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+/* ===================== テーマ ===================== */
+const C = {
+  page: "#E7E8EA", card: "#FBFBFC", ink: "#1E212A", soft: "#666C76",
+  faint: "#99A0A8", border: "#DEDFE2", grid: "#ECEDEF",
+  steel: "#2B4A78", steelSoft: "#5E7CA6", teal: "#2F7368",
+  gold: "#A9792F", red: "#BC4A2E",
+};
+const FONT = '"Hiragino Sans","Noto Sans JP","Yu Gothic",Meiryo,system-ui,sans-serif';
+const RC_LEGAL = 47;
+
+/* ===================== フォーマッタ ===================== */
+const yen = (v) => Math.round(v);
+const fMan = (v) => (v / 1e4).toLocaleString(undefined, { maximumFractionDigits: 1 }) + "万";
+const fYen = (v) => {
+  const a = Math.abs(v);
+  if (a >= 1e8) return (v / 1e8).toFixed(2) + "億円";
+  return Math.round(v / 1e4).toLocaleString() + "万円";
+};
+const fPct = (x, d = 1) => (x * 100).toFixed(d) + "%";
+const axisTick = (v) => (Math.abs(v) >= 1e8 ? (v / 1e8).toFixed(1) + "億" : Math.round(v / 1e4).toLocaleString());
+
+/* ===================== IRR ===================== */
+function irr(cfs) {
+  const npv = (r) => cfs.reduce((a, c, i) => a + c / Math.pow(1 + r, i), 0);
+  let lo = -0.9, hi = 1, fLo = npv(lo), fHi = npv(hi), t = 0;
+  while (fLo * fHi > 0 && hi < 12 && t < 60) { hi += 0.5; fHi = npv(hi); t++; }
+  if (fLo * fHi > 0) return null;
+  for (let i = 0; i < 120; i++) {
+    const m = (lo + hi) / 2, fM = npv(m);
+    if (Math.abs(fM) < 1) return m;
+    if (fLo * fM < 0) { hi = m; } else { lo = m; fLo = fM; }
+  }
+  return (lo + hi) / 2;
+}
+
+/* ===================== シミュレーション ===================== */
+function simulate(p) {
+  const P = p.priceMan * 1e4;
+  const B = Math.min(p.buildingMan * 1e4, P);
+  const acq = p.acqMan * 1e4;
+  const down = Math.min(p.downMan * 1e4, P);
+  const L0 = Math.max(0, P - down);
+  const equity = down + acq;
+
+  const r = p.rate / 100 / 12;
+  const n = p.term * 12;
+  const M = L0 > 0 ? (r === 0 ? L0 / n : (L0 * r) / (1 - Math.pow(1 + r, -n))) : 0;
+  const monthlyPrincipal = n > 0 ? L0 / n : 0;
+  const D = B / RC_LEGAL;
+
+  const opex0 = p.opexMan * 1e4;
+  const tax0 = p.taxMan * 1e4;
+
+  const rows = [];
+  let loan = L0, accumCF = -acq, accumDep = 0, deadCross = null;
+  const stream = [-equity];
+
+  for (let t = 1; t <= p.years; t++) {
+    const V = P * Math.pow(1 + p.valueChg / 100, t);
+    const rent = p.rentMan * 1e4 * 12 * Math.pow(1 + p.rentChg / 100, t - 1) * (1 - p.vacancy / 100);
+    const opexRun = opex0 * Math.pow(1 + p.inflation / 100, t - 1);
+    const propTax = tax0 * Math.pow(1 + p.taxChg / 100, t - 1);
+    const opex = opexRun + propTax;
+
+    let interest = 0, principal = 0;
+    for (let m = 0; m < 12; m++) {
+      if (loan <= 0 || t > p.term) break;
+      const i = loan * r;
+      let pr = p.loanMethod === "gankin" ? monthlyPrincipal : M - i;
+      if (pr > loan) pr = loan;
+      interest += i; principal += pr; loan -= pr;
+    }
+    const debt = interest + principal;
+    const dep = (p.useDep && t <= RC_LEGAL) ? D : 0;
+    accumDep += dep;
+    if (p.useDep && deadCross === null && debt > 0 && principal > dep) deadCross = t;
+
+    const taxable = rent - opex - interest - dep;
+    const tax = taxable >= 0 ? taxable * (p.incomeTax / 100) : (p.lossOffset ? taxable * (p.incomeTax / 100) : 0);
+    const cf = rent - opex - debt - tax;
+    accumCF += cf; stream.push(cf);
+
+    const saleCost = V * (p.saleRate / 100);
+    const book = P + acq - accumDep;
+    const gain = V - saleCost - book;
+    const cgRate = t <= 5 ? 0.3963 : 0.20315;
+    const cgTax = Math.max(0, gain) * cgRate;
+    const saleNet = V - saleCost - loan - cgTax;
+
+    rows.push({
+      year: t, V, rent, opex, opexRun, propTax, interest, principal, debt,
+      dep, accumDep, taxable, tax, cf, accumCF, loan,
+      nwHold: V - loan + accumCF, nwReal: accumCF + saleNet,
+      saleCost, book, gain, cgRate, cgTax, saleNet,
+    });
+  }
+
+  const last = rows[rows.length - 1];
+  const s = [...stream]; s[s.length - 1] += last.saleNet;
+  const eqIrr = irr(s);
+  const y1 = rows[0];
+  const grossYield = (p.rentMan * 1e4 * 12) / P;
+
+  return {
+    rows, P, B, acq, L0, down, equity, M, monthlyPrincipal, D, opex0, tax0, monthlyRate: r, nMonths: n,
+    deadCross, finalHold: last.nwHold, finalReal: last.nwReal,
+    multiple: equity > 0 ? last.nwReal / equity : 0, eqIrr, firstCF: y1.cf, grossYield,
+  };
+}
+
+/* ===================== 既定値 ===================== */
+const BASE = {
+  priceMan: 6000, buildingMan: 3900, acqMan: 420,
+  downMan: 600, rate: 2.0, term: 35,
+  rentMan: 30, vacancy: 8, rentChg: -0.7,
+  opexMan: 72, inflation: 1.0, taxMan: 50, taxChg: -1.0,
+  valueChg: -1.0, years: 35,
+  incomeTax: 30, lossOffset: true, saleRate: 4, useDep: false, loanMethod: "ganri",
+};
+
+/* ===================== 用語集 ===================== */
+const GLOSSARY = [
+  ["純資産", "物件の価値から、まだ残っているローンを引いた『あなたの正味の取り分』。これに手元へ貯まった現金を足したもの。このアプリのゴール。"],
+  ["自己資金", "最初に自分の現金で出す額。頭金と諸費用を合わせたもの。"],
+  ["諸費用", "物件価格とは別に、買うときに一度だけかかる費用の合計（仲介手数料・登記費用・不動産取得税など）。"],
+  ["不動産取得税", "不動産を買ったあと一度だけ払う税金。毎年はかからない。新築には軽減措置がある。"],
+  ["固定資産税", "土地と建物の所有者に毎年かかる税金。市区町村が決めた評価額に対してかかる（都市計画税も含む）。"],
+  ["評価替え", "固定資産税のもとになる評価額を3年ごとに見直すこと。建物は古くなるほど評価額が下がる。"],
+  ["減価償却", "建物の価値が毎年少しずつ減るとみなし、その分を『経費』にできる仕組み。お金は出ていかないのに経費にできるので、税金を下げる効果がある。"],
+  ["耐用年数", "減価償却を何年に分けて行うかの法律上の年数。新築のRC（鉄筋コンクリート）は47年。"],
+  ["定額法", "減価償却を毎年同じ額ずつ計上していく方法。"],
+  ["元利均等返済", "毎月の返済額が一定になるローンの返し方。最初は利息の割合が多く、だんだん元金の割合が増える。"],
+  ["元金・利息", "元金は借りた金額そのもの。利息はお金を借りていることへの手数料。利息は経費にできるが、元金は経費にできない。"],
+  ["キャッシュフロー（CF）", "1年間で実際に手元に残るお金。入ってくる家賃から、出ていく経費・ローン返済・税金を引いたもの。マイナスなら持ち出し。"],
+  ["累積CF", "毎年のキャッシュフローを足し続けた合計。"],
+  ["実効家賃", "満室を前提にした家賃から、空室のぶんを引いた『実際に入ってくる家賃』。"],
+  ["空室率", "1年のうち部屋が埋まらない割合。10%なら、1年の約1割は家賃が入らない想定。"],
+  ["表面利回り", "年間の家賃 ÷ 物件価格。ざっくりした収益性の目安で、経費は考えていない数字。"],
+  ["課税所得", "税金がかかる利益。家賃から、経費・利息・減価償却を引いて求める。"],
+  ["損益通算", "不動産が赤字のとき、その赤字を給与など他の所得と相殺して、払う税金を減らせる仕組み。会社員はオンが一般的。"],
+  ["デッドクロス", "経費にできる減価償却より、経費にできない元金返済のほうが大きくなる時点。帳簿は黒字なのに、手元の現金が苦しくなりやすい。"],
+  ["保有純資産", "売らずに持ち続けた場合の純資産（物件の評価額をもとにした計算上の値）。"],
+  ["実現純資産", "その年に売った場合に、税金や残ったローンを精算して、実際に手元へ残る金額。"],
+  ["譲渡税", "売って利益が出たときにかかる税金。持っていた期間が5年以内だと約39.6%、5年超だと約20.3%と、長く持つほど安くなる。"],
+  ["IRR（自己資金利回り）", "投じた自己資金が、年あたり何%で増えたかを表す指標。預金金利のように『年◯%で回った』と読める。"],
+  ["自己資金倍率", "最終的に手元へ残るお金が、最初に出した自己資金の何倍になったか。"],
+  ["損益計算書（P/L）", "1年間の『もうけ』を表す表。家賃などの収入から、費用・利息・税金を引いて利益を出す。期間中の動き（フロー）の計算。"],
+  ["貸借対照表（B/S）", "ある時点の『財産の状態』を表す表。左に資産、右に負債と純資産を並べる。資産＝負債＋純資産で必ず釣り合う。残高（ストック）の計算。"],
+  ["資産", "持っているものの価値。ここでは物件（時価）と現金。"],
+  ["負債", "返さなければならないもの。ここではローン残高。"],
+  ["簿価", "帳簿上の価値。取得にかかった金額から、減価償却した分を引いたもの。税金（譲渡益）の計算に使う。"],
+  ["時価", "いま売ったらいくらか、という市場での価値。"],
+  ["含み損益", "時価と簿価の差。プラスなら含み益（売れば利益）、マイナスなら含み損。"],
+];
+
+/* ===================== CSS ===================== */
+const CSS = `
+*{box-sizing:border-box;}
+.hdr{padding:32px 40px 14px;max-width:1280px;margin:0 auto;}
+.eyebrow{font-size:11px;letter-spacing:.22em;color:${C.gold};font-weight:700;text-transform:uppercase;}
+.hdr h1{font-size:clamp(21px,3.2vw,31px);margin:9px 0 7px;font-weight:800;letter-spacing:-.01em;}
+.lead{color:${C.soft};max-width:620px;line-height:1.7;font-size:13.5px;margin:0;}
+.qmark{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;background:${C.steel};color:#fff;font-size:10px;font-weight:700;margin:0 2px;vertical-align:middle;}
+
+.intro{max-width:1280px;margin:0 auto;padding:6px 40px;}
+.intro{background:none;}
+.intro .intro-title{font-size:13px;font-weight:800;color:${C.steel};margin-bottom:8px;}
+.intro-steps{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:5px;}
+.intro-steps li{font-size:13px;line-height:1.65;color:${C.ink};}
+.intro-steps b{color:${C.steel};}
+.intro-foot{font-size:12px;color:${C.soft};margin-top:9px;}
+@media(max-width:920px){.hdr,.intro{padding-left:18px;padding-right:18px;}}
+
+.layout{display:grid;grid-template-columns:330px 1fr;gap:22px;max-width:1280px;margin:0 auto;padding:14px 40px 54px;align-items:start;}
+@media(max-width:920px){.layout{grid-template-columns:1fr;padding-left:18px;padding-right:18px;}}
+
+.controls{position:sticky;top:14px;display:flex;flex-direction:column;gap:12px;}
+@media(max-width:920px){.controls{position:static;}}
+.group{background:${C.card};border:1px solid ${C.border};border-radius:13px;padding:14px 15px 16px;display:flex;flex-direction:column;gap:16px;}
+.group-title{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:700;}
+.group-title span{font-size:10.5px;font-weight:800;color:${C.gold};letter-spacing:.05em;}
+
+.ctrl-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px;gap:8px;}
+.ctrl-label{font-size:12.5px;font-weight:500;line-height:1.4;}
+.ctrl-val{display:flex;align-items:baseline;gap:3px;flex:none;}
+.ctrl-val input{width:64px;text-align:right;border:none;border-bottom:1.5px solid ${C.border};background:none;font-size:15px;font-weight:700;color:${C.steel};font-variant-numeric:tabular-nums;padding:0 2px 1px;}
+.ctrl-val input:focus{outline:none;border-color:${C.steel};}
+.ctrl-val em{font-style:normal;font-size:11px;color:${C.faint};}
+.ctrl-hint{font-size:11px;color:${C.faint};margin-top:6px;line-height:1.6;}
+
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:3px;border-radius:3px;background:${C.border};outline:none;}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:${C.steel};border:2px solid ${C.card};box-shadow:0 1px 3px rgba(0,0,0,.25);cursor:pointer;}
+input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:${C.steel};border:2px solid ${C.card};cursor:pointer;}
+.switch{display:flex;align-items:center;gap:9px;font-size:12.5px;cursor:pointer;}
+.switch input{width:16px;height:16px;accent-color:${C.steel};}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:2px;}
+.seg-btn{font-family:inherit;cursor:pointer;border:1px solid ${C.border};background:${C.page};color:${C.soft};border-radius:8px;padding:7px 2px;font-size:12px;font-weight:600;}
+.seg-btn.on{background:${C.steel};color:#fff;border-color:${C.steel};}
+
+.info{position:relative;display:inline-flex;margin-left:5px;}
+.info-btn{width:15px;height:15px;border-radius:50%;border:1px solid ${C.steelSoft};background:#fff;color:${C.steel};font-size:10px;line-height:1;cursor:pointer;font-weight:800;padding:0;display:inline-flex;align-items:center;justify-content:center;}
+.info-pop{position:absolute;z-index:20;top:21px;left:0;width:235px;background:#fff;border:1px solid ${C.border};border-radius:9px;padding:10px 12px;font-size:11.5px;line-height:1.65;color:${C.ink};font-weight:400;box-shadow:0 8px 26px rgba(0,0,0,.14);text-align:left;}
+@media(max-width:420px){.info-pop{width:200px;left:auto;right:0;}}
+
+.results{display:flex;flex-direction:column;gap:15px;}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;}
+@media(max-width:720px){.kpi-grid{grid-template-columns:repeat(2,1fr);}}
+.kpi{background:${C.card};border:1px solid ${C.border};border-radius:13px;padding:15px;position:relative;}
+.kpi-label{font-size:11px;color:${C.soft};margin-bottom:7px;line-height:1.4;display:flex;align-items:center;}
+.kpi-value{font-size:21px;font-weight:800;letter-spacing:-.01em;font-variant-numeric:tabular-nums;}
+.kpi-sub{font-size:10.5px;color:${C.faint};margin-top:5px;line-height:1.4;}
+
+.eventbar{display:flex;gap:8px;flex-wrap:wrap;}
+.ev{font-size:11.5px;font-weight:600;padding:5px 11px;border-radius:999px;display:inline-flex;align-items:center;}
+.ev.red{background:#f6e7e2;color:${C.red};}.ev.gold{background:#f3ecde;color:${C.gold};}
+.ev.teal{background:#e2efeb;color:${C.teal};}.ev.muted{background:${C.page};color:${C.faint};}
+.ev .info-btn{border-color:currentColor;color:inherit;}
+
+.panel{background:${C.card};border:1px solid ${C.border};border-radius:13px;padding:17px;}
+.panel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px;}
+.panel-head h3{font-size:14px;font-weight:700;margin:0;}
+.legend{display:flex;align-items:center;font-size:11.5px;color:${C.soft};}
+.legend i{width:11px;height:11px;border-radius:3px;display:inline-block;margin-right:5px;}
+.chart-note{font-size:11.5px;color:${C.soft};line-height:1.6;margin-top:10px;padding-top:10px;border-top:1px solid ${C.grid};}
+
+.bs{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:start;margin-top:12px;}
+@media(max-width:560px){.bs{grid-template-columns:1fr;}.bs-eq{display:none;}}
+.bs-col{border:1px solid ${C.border};border-radius:10px;padding:12px 14px;background:${C.page};}
+.bs-side{font-size:11px;font-weight:800;color:${C.soft};letter-spacing:.03em;margin-bottom:8px;}
+.bs-item{display:flex;justify-content:space-between;font-size:12.5px;padding:6px 0;border-bottom:1px solid ${C.grid};font-variant-numeric:tabular-nums;gap:10px;}
+.bs-item.strong{font-weight:700;color:${C.steel};}
+.bs-total{display:flex;justify-content:space-between;font-size:13px;font-weight:800;padding-top:8px;margin-top:2px;font-variant-numeric:tabular-nums;gap:10px;}
+.bs-eq{align-self:center;font-size:20px;color:${C.faint};font-weight:700;}
+.lev{margin-top:14px;}
+.lev-bar{display:flex;height:16px;border-radius:6px;overflow:hidden;border:1px solid ${C.border};}
+.lev-debt{background:rgba(188,74,46,.45);}
+.lev-eq{background:${C.steel};}
+.lev-legend{font-size:11.5px;color:${C.soft};margin-top:6px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px;}
+.artic{margin-top:14px;background:${C.page};border-radius:10px;padding:12px 14px;}
+.artic-title{font-size:12px;font-weight:800;color:${C.steel};margin-bottom:8px;}
+.artic-eq{font-size:13px;line-height:1.8;font-variant-numeric:tabular-nums;}
+.artic-eq b{color:${C.steel};}
+.artic-note{font-size:11.5px;color:${C.soft};line-height:1.65;margin-top:9px;}
+.bs-book{margin-top:14px;display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;font-variant-numeric:tabular-nums;color:${C.ink};align-items:baseline;}
+.bs-book .lbl{color:${C.faint};margin-right:5px;font-size:11px;}
+.bs-book-note{flex-basis:100%;font-size:11px;color:${C.faint};line-height:1.65;margin-top:2px;}
+.panel-subtitle{font-size:12px;color:${C.soft};margin:18px 0 8px;padding-top:14px;border-top:1px solid ${C.grid};}
+
+.gloss-toggle{font-family:inherit;background:none;border:none;color:${C.steel};font-weight:700;font-size:13px;cursor:pointer;padding:2px 0;text-align:left;}
+.gloss{margin-top:14px;display:flex;flex-direction:column;}
+.gloss-row{display:grid;grid-template-columns:140px 1fr;gap:14px;padding:11px 0;border-top:1px solid ${C.grid};}
+@media(max-width:600px){.gloss-row{grid-template-columns:1fr;gap:3px;}}
+.gloss-term{font-size:12.5px;font-weight:700;color:${C.steel};}
+.gloss-def{font-size:12.5px;color:${C.soft};line-height:1.65;}
+
+.calc{padding-bottom:20px;}
+.calc-intro{font-size:11.5px;color:${C.soft};line-height:1.6;margin:2px 0 12px;background:${C.page};border-radius:9px;padding:9px 12px;}
+.yearpick{display:flex;gap:6px;flex-wrap:wrap;}
+.ychip{font-family:inherit;cursor:pointer;border:1px solid ${C.border};background:${C.page};color:${C.soft};border-radius:999px;padding:5px 11px;font-size:11.5px;font-weight:600;}
+.ychip.on{background:${C.steel};color:#fff;border-color:${C.steel};}
+.yslider{margin:4px 0 6px;}
+.calc-cur{font-size:13px;color:${C.soft};margin:6px 0 14px;}
+.calc-cur b{color:${C.steel};font-size:16px;font-weight:800;}
+
+.const-box{background:${C.page};border-radius:10px;padding:4px 14px;margin-bottom:14px;}
+.const-title{font-size:11px;color:${C.faint};font-weight:700;letter-spacing:.04em;padding:10px 0 2px;}
+
+.frow{display:grid;grid-template-columns:185px 1fr;gap:14px;padding:13px 0;border-top:1px solid ${C.grid};}
+.const-box .frow:first-of-type{border-top:none;}
+@media(max-width:620px){.frow{grid-template-columns:1fr;gap:5px;}}
+.frow-name{font-size:13px;font-weight:700;line-height:1.45;}
+.frow-note{display:block;font-size:10.5px;color:${C.faint};font-weight:500;margin-top:3px;line-height:1.5;}
+.frow-body{display:flex;flex-direction:column;gap:5px;}
+.fline{display:flex;align-items:baseline;gap:9px;font-size:13px;line-height:1.7;}
+.ftag{flex:none;width:30px;font-size:10px;color:${C.faint};font-weight:700;text-align:right;padding-top:1px;}
+.ftag.eq{color:${C.ink};font-size:14px;}
+.fmath{color:${C.soft};font-variant-numeric:tabular-nums;}
+.fres{font-weight:700;font-variant-numeric:tabular-nums;font-size:14px;}
+sup{font-size:.72em;}sub{font-size:.72em;}
+
+.frac{display:inline-flex;flex-direction:column;text-align:center;vertical-align:middle;margin:0 2px;}
+.frac .fn{padding:0 5px;}
+.frac .fd{padding:1px 5px 0;border-top:1.4px solid currentColor;}
+
+.disclaimer{font-size:11px;color:${C.faint};line-height:1.7;margin:2px;}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;}}
+`;
+
+/* ===================== オフライン版ビュー（依存ゼロ） ===================== */
+(function () {
+  const KEY = "rc_sim_offline_v1";
+  const byId = (id) => document.getElementById(id);
+  let state, yr = 1, showGloss = false, sim = null, raf = null;
+
+  try {
+    const raw = localStorage.getItem(KEY);
+    if (raw) { const o = JSON.parse(raw); state = Object.assign({}, BASE, o.p || {}); yr = o.yr || 1; showGloss = !!o.showGloss; }
+  } catch (e) {}
+  if (!state) state = Object.assign({}, BASE);
+  function save() { try { localStorage.setItem(KEY, JSON.stringify({ p: state, yr: yr, showGloss: showGloss })); } catch (e) {} }
+
+  const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  const fr = (n, d) => `<span class="frac"><span class="fn">${n}</span><span class="fd">${d}</span></span>`;
+  const pw = (b, e) => `${b}<sup>${e}</sup>`;
+  const info = (t) => `<span class="info"><button type="button" class="info-btn" data-info="${esc(t)}">?</button></span>`;
+  const curYear = () => Math.min(Math.max(1, yr), state.years);
+
+  /* ---------- 入力コントロール定義 ---------- */
+  const GROUPS = [
+    { n: "01", t: "物件（買うときに金額が決まる）", items: [
+      { key: "priceMan", label: "物件価格", min: 1000, max: 30000, step: 100, unit: "万円", hint: "土地と建物を合わせた、物件そのものの値段。" },
+      { key: "buildingMan", label: "うち建物の価格", min: 0, maxKey: "priceMan", max: 30000, step: 50, unit: "万円", hint: (s) => s.useDep
+        ? `売買契約書に書かれた建物分の金額。残り 土地 ${Math.max(0, s.priceMan - s.buildingMan).toLocaleString()}万円。建物だけが減価償却（価値の目減りを経費にできる仕組み）の対象です。`
+        : `売買契約書に書かれた建物分の金額。残り 土地 ${Math.max(0, s.priceMan - s.buildingMan).toLocaleString()}万円。※いまは減価償却オフのため、この金額は計算に使われません。` },
+      { key: "acqMan", label: "購入時にかかる費用（諸費用）", min: 0, max: 3000, step: 10, unit: "万円", hint: "物件価格とは別に、買うときに一度だけ払うお金の合計。内訳は、仲介手数料／登記費用（登録免許税・司法書士報酬）／不動産取得税／ローンの事務手数料・保証料／印紙税／火災保険の初期一括分。物件価格のおよそ5〜8%が目安です。" },
+    ]},
+    { n: "02", t: "ローン（銀行からの借入）", items: [
+      { key: "downMan", label: "頭金（自分で出す現金）", min: 0, maxKey: "priceMan", max: 30000, step: 50, unit: "万円", hint: "購入時に自分の現金で出す部分。物件価格からこれを引いた額を銀行から借ります。" },
+      { key: "rate", label: "金利（年）", min: 0.3, max: 5, step: 0.1, unit: "%", hint: "借りたお金にかかる、1年あたりの利率。" },
+      { key: "term", label: "返済期間", min: 10, max: 40, step: 1, unit: "年", hint: "ローンを何年かけて返すか。長いほど毎月の返済は軽くなります。" },
+      { seg: true },
+    ]},
+    { n: "03", t: "家賃収入", items: [
+      { key: "rentMan", label: "満室のときの月額家賃", min: 3, max: 300, step: 1, unit: "万円", hint: "すべての部屋が埋まっている前提での、1か月の家賃合計。" },
+      { key: "vacancy", label: "空室率（埋まらない割合）", min: 0, max: 30, step: 1, unit: "%", hint: "1年のうち部屋が埋まらない割合。10%なら、1年の約1割は家賃が入らない想定です。" },
+      { key: "rentChg", label: "家賃の変動率（年）", min: -4, max: 3, step: 0.1, unit: "%", hint: "1年あたり家賃が何%上下するか。建物が古くなると下がりやすく、物価が上がると上がりやすい。" },
+    ]},
+    { n: "04", t: "毎年かかる費用", items: [
+      { key: "opexMan", label: "維持コスト（運営費・初年度の年額）", min: 0, max: 500, step: 1, unit: "万円", hint: "毎年かかる維持コストの合計（初年度の1年ぶん）。内訳は、管理委託料／日常の修繕・点検費／火災・地震保険料／共用部分の電気・水道代／入居者募集の広告料。" },
+      { key: "inflation", label: "└ 物価による上昇率（年）", min: -2, max: 6, step: 0.1, unit: "%", hint: "上の維持コストが、物価上昇で毎年何%増えるか。" },
+      { key: "taxMan", label: "固定資産税（初年度の年額）", min: 0, max: 500, step: 1, unit: "万円", hint: "土地と建物の所有者に毎年かかる税金（固定資産税＋都市計画税）。納税通知書の金額をそのまま入れればOK。" },
+      { key: "taxChg", label: "└ 固定資産税の変動率（年）", min: -4, max: 2, step: 0.1, unit: "%", hint: "税額は3年ごとに見直され（評価替え）、建物が古くなるぶん少しずつ下がるのが一般的。0%にすれば毎年同じ額で計算します。" },
+    ]},
+    { n: "05", t: "前提と税金", items: [
+      { key: "valueChg", label: "物件価格の変動率（年）", min: -4, max: 3, step: 0.1, unit: "%", hint: "物件そのものの値段が、1年あたり何%上下するか。将来の売値に効きます。" },
+      { key: "incomeTax", label: "所得税＋住民税の税率", min: 5, max: 55, step: 1, unit: "%", hint: "家賃のもうけにかかる、所得税と住民税を合わせた税率。年収が高い人ほど高くなります。" },
+      { chk: "lossOffset", label: "損益通算する", hint: "不動産が赤字のとき、その赤字を給与など他の所得と相殺して、払う税金を減らせる仕組み。会社員の方はオンが一般的です。" },
+      { chk: "useDep", label: "減価償却を考慮する", hint: "オフだと建物の価値の目減りを経費に入れずに計算します。経費が減るぶん税金は高めに・手残りは少なめになりますが、デッドクロスは起きず、売却時の譲渡税はむしろ安くなります。なお個人の確定申告では減価償却は原則“必須（強制償却）”で、オフを選べるのは法人（任意償却）などに限られます。" },
+      { key: "saleRate", label: "売却時にかかる費用", min: 0, max: 8, step: 0.5, unit: "%", hint: "売るときにかかる費用（仲介手数料・登記の抹消費用・印紙税）。将来の売値しだいなので、売値に対する％で指定します。" },
+      { key: "years", label: "何年ぶんを計算するか", min: 5, max: 40, step: 1, unit: "年", hint: "購入から何年先までシミュレーションするか。" },
+    ]},
+  ];
+
+  function ctrlHTML(it) {
+    const v = state[it.key];
+    const max = it.maxKey ? state[it.maxKey] : it.max;
+    const hint = typeof it.hint === "function" ? it.hint(state) : it.hint;
+    return `<div class="ctrl"><div class="ctrl-head"><span class="ctrl-label">${it.label}</span>`
+      + `<span class="ctrl-val"><input type="number" class="main-num" data-key="${it.key}" value="${v}" step="${it.step}"><em>${it.unit}</em></span></div>`
+      + `<input type="range" class="main-range" data-key="${it.key}" min="${it.min}" max="${max}" step="${it.step}" value="${v}">`
+      + `<div class="ctrl-hint" data-hint="${it.key}">${hint}</div></div>`;
+  }
+  function segHTML() {
+    return `<div class="ctrl"><div class="ctrl-head"><span class="ctrl-label">返済方法</span></div>`
+      + `<div class="seg"><button class="seg-btn${state.loanMethod === "ganri" ? " on" : ""}" data-loan="ganri">元利均等</button>`
+      + `<button class="seg-btn${state.loanMethod === "gankin" ? " on" : ""}" data-loan="gankin">元金均等</button></div>`
+      + `<div class="ctrl-hint">元利均等＝毎月の支払い合計が一定（最初は利息が多く、だんだん元金が増える）。元金均等＝元金の返済額を一定にする方式で、毎月の支払いは年々下がる。どちらも残債は返済のたびに減ります。</div></div>`;
+  }
+  function chkHTML(it) {
+    return `<div class="ctrl"><label class="switch"><input type="checkbox" class="chk" data-key="${it.chk}" ${state[it.chk] ? "checked" : ""}><span>${it.label}</span></label>`
+      + `<div class="ctrl-hint">${it.hint}</div></div>`;
+  }
+  function controlsHTML() {
+    return GROUPS.map((g) => `<div class="group"><div class="group-title"><span>${g.n}</span>${g.t}</div>`
+      + g.items.map((it) => it.seg ? segHTML() : it.chk ? chkHTML(it) : ctrlHTML(it)).join("") + `</div>`).join("");
+  }
+
+  /* ---------- SVGグラフ ---------- */
+  const VW = 720;
+  const svg = (vh, inner, defs) => `<svg viewBox="0 0 ${VW} ${vh}" width="100%" height="${vh}" preserveAspectRatio="xMidYMid meet" style="display:block;max-width:100%">${defs || ""}${inner}</svg>`;
+  function yGrid(mn, mx, sy, pL, pR, color) {
+    let s = "";
+    for (let i = 0; i <= 4; i++) {
+      const v = mn + (mx - mn) * i / 4, y = sy(v);
+      s += `<line x1="${pL}" y1="${y.toFixed(1)}" x2="${pR}" y2="${y.toFixed(1)}" stroke="${C.grid}"/>`;
+      s += `<text x="${pL - 6}" y="${(y + 3).toFixed(1)}" text-anchor="end" font-size="11" fill="${color || C.soft}">${axisTick(v)}</text>`;
+    }
+    return s;
+  }
+  function xLabels(N, sx, vh) {
+    let s = "", step = Math.max(1, Math.ceil(N / 8));
+    for (let y = 1; y <= N; y++) if ((y - 1) % step === 0 || y === N)
+      s += `<text x="${sx(y).toFixed(1)}" y="${vh - 7}" text-anchor="middle" font-size="11" fill="${C.soft}">${y}</text>`;
+    return s;
+  }
+  function overlay(N, pL, pR, pT, pB) {
+    let s = "", w = (pR - pL) / N;
+    for (let i = 0; i < N; i++) s += `<rect class="yhit" data-year="${i + 1}" x="${(pL + w * i).toFixed(1)}" y="${pT}" width="${w.toFixed(1)}" height="${pB - pT}" fill="transparent" style="cursor:pointer"/>`;
+    return s;
+  }
+  function vline(x, color, label, pT, pB, dash) {
+    return `<line x1="${x.toFixed(1)}" y1="${pT}" x2="${x.toFixed(1)}" y2="${pB}" stroke="${color}" ${dash ? `stroke-dasharray="${dash}"` : ""} stroke-width="1.3"/>`
+      + (label ? `<text x="${x.toFixed(1)}" y="${pT - 2}" text-anchor="middle" font-size="10" fill="${color}">${label}</text>` : "");
+  }
+
+  function chartNW(tSel) {
+    const rows = sim.rows, N = rows.length, vh = 300, pT = 16, pB = vh - 24, pL = 50, pR = VW - 14;
+    let mn = 0, mx = 0;
+    rows.forEach((r) => { mn = Math.min(mn, r.nwHold, r.nwReal); mx = Math.max(mx, r.nwHold, r.nwReal); });
+    const pad = (mx - mn) * 0.08 || 1; mx += pad; mn -= pad;
+    const sx = (y) => N <= 1 ? pL : pL + ((y - 1) / (N - 1)) * (pR - pL);
+    const sy = (v) => pB - (v - mn) / (mx - mn) * (pB - pT);
+    const yb = sy(0);
+    let area = `M ${sx(1).toFixed(1)} ${yb.toFixed(1)}`;
+    rows.forEach((r) => { area += ` L ${sx(r.year).toFixed(1)} ${sy(r.nwHold).toFixed(1)}`; });
+    area += ` L ${sx(N).toFixed(1)} ${yb.toFixed(1)} Z`;
+    const line = rows.map((r) => `${sx(r.year).toFixed(1)},${sy(r.nwHold).toFixed(1)}`).join(" ");
+    const real = rows.map((r) => `${sx(r.year).toFixed(1)},${sy(r.nwReal).toFixed(1)}`).join(" ");
+    const ev = [];
+    if (sim.deadCross) ev.push([sim.deadCross, "デッドクロス", C.red]);
+    if (state.useDep && RC_LEGAL <= state.years) ev.push([RC_LEGAL, "償却終了", C.gold]);
+    if (state.term <= state.years) ev.push([state.term, "完済", C.teal]);
+    let inner = yGrid(mn, mx, sy, pL, pR) + xLabels(N, sx, vh);
+    inner += `<line x1="${pL}" y1="${yb.toFixed(1)}" x2="${pR}" y2="${yb.toFixed(1)}" stroke="${C.faint}" stroke-dasharray="2 2"/>`;
+    inner += `<path d="${area}" fill="url(#gNW)" stroke="none"/>`;
+    inner += `<polyline points="${line}" fill="none" stroke="${C.steel}" stroke-width="2.4"/>`;
+    inner += `<polyline points="${real}" fill="none" stroke="${C.gold}" stroke-width="2" stroke-dasharray="5 4"/>`;
+    ev.forEach((e) => { inner += vline(sx(e[0]), e[2], e[1], pT, pB, "4 3"); });
+    inner += vline(sx(tSel), C.steelSoft, tSel + "年", pT, pB);
+    inner += overlay(N, pL, pR, pT, pB);
+    const defs = `<defs><linearGradient id="gNW" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="${C.steel}" stop-opacity="0.26"/><stop offset="100%" stop-color="${C.steel}" stop-opacity="0.02"/></linearGradient></defs>`;
+    return svg(vh, inner, defs);
+  }
+
+  function chartCF() {
+    const rows = sim.rows, N = rows.length, vh = 210, pT = 10, pB = vh - 24, pL = 50, pR = VW - 14;
+    let mn = 0, mx = 0; rows.forEach((r) => { mn = Math.min(mn, r.cf); mx = Math.max(mx, r.cf); });
+    const pad = (mx - mn) * 0.08 || 1; mx += pad; mn -= pad;
+    const slot = (pR - pL) / N, bw = slot * 0.6;
+    const sxC = (i) => pL + slot * (i + 0.5);
+    const sy = (v) => pB - (v - mn) / (mx - mn) * (pB - pT);
+    const yb = sy(0);
+    let inner = yGrid(mn, mx, sy, pL, pR) + xLabels(N, (y) => sxC(y - 1), vh);
+    inner += `<line x1="${pL}" y1="${yb.toFixed(1)}" x2="${pR}" y2="${yb.toFixed(1)}" stroke="${C.faint}"/>`;
+    rows.forEach((r, i) => {
+      const y = r.cf >= 0 ? sy(r.cf) : yb, h = Math.abs(sy(r.cf) - yb);
+      inner += `<rect x="${(sxC(i) - bw / 2).toFixed(1)}" y="${y.toFixed(1)}" width="${bw.toFixed(1)}" height="${Math.max(0, h).toFixed(1)}" fill="${r.cf >= 0 ? C.teal : C.red}"/>`;
+    });
+    if (sim.deadCross) inner += vline(sxC(sim.deadCross - 1), C.red, "", pT, pB, "4 3");
+    inner += overlay(N, pL, pR, pT, pB);
+    return svg(vh, inner);
+  }
+
+  function chartLoan() {
+    const rows = sim.rows, N = rows.length, vh = 230, pT = 10, pB = vh - 24, pL = 50, pR = VW - 50;
+    let leftMax = 1, rightMax = Math.max(sim.L0, 1);
+    rows.forEach((r) => { leftMax = Math.max(leftMax, r.principal + r.interest); rightMax = Math.max(rightMax, r.loan); });
+    const slot = (pR - pL) / N, bw = slot * 0.6;
+    const sxC = (i) => pL + slot * (i + 0.5);
+    const syL = (v) => pB - (v / leftMax) * (pB - pT);
+    const syR = (v) => pB - (v / rightMax) * (pB - pT);
+    let inner = "";
+    for (let i = 0; i <= 4; i++) {
+      const y = pB - (pB - pT) * i / 4;
+      inner += `<line x1="${pL}" y1="${y.toFixed(1)}" x2="${pR}" y2="${y.toFixed(1)}" stroke="${C.grid}"/>`;
+      inner += `<text x="${pL - 6}" y="${(y + 3).toFixed(1)}" text-anchor="end" font-size="11" fill="${C.soft}">${axisTick(leftMax * i / 4)}</text>`;
+      inner += `<text x="${pR + 6}" y="${(y + 3).toFixed(1)}" text-anchor="start" font-size="11" fill="${C.gold}">${axisTick(rightMax * i / 4)}</text>`;
+    }
+    inner += xLabels(N, (y) => sxC(y - 1), vh);
+    rows.forEach((r, i) => {
+      const x = sxC(i) - bw / 2;
+      const yp = syL(r.principal), hp = pB - yp;
+      inner += `<rect x="${x.toFixed(1)}" y="${yp.toFixed(1)}" width="${bw.toFixed(1)}" height="${Math.max(0, hp).toFixed(1)}" fill="${C.steel}"/>`;
+      const yi = syL(r.principal + r.interest), hi = yp - yi;
+      inner += `<rect x="${x.toFixed(1)}" y="${yi.toFixed(1)}" width="${bw.toFixed(1)}" height="${Math.max(0, hi).toFixed(1)}" fill="${C.red}" fill-opacity="0.5"/>`;
+    });
+    const loanLine = rows.map((r, i) => `${sxC(i).toFixed(1)},${syR(r.loan).toFixed(1)}`).join(" ");
+    inner += `<polyline points="${loanLine}" fill="none" stroke="${C.gold}" stroke-width="2.2"/>`;
+    inner += overlay(N, pL, pR, pT, pB);
+    return svg(vh, inner);
+  }
+
+  function chartBS(tSel) {
+    const rows = sim.rows, N = rows.length, vh = 210, pT = 10, pB = vh - 24, pL = 50, pR = VW - 14;
+    let mx = 1; rows.forEach((r) => { mx = Math.max(mx, r.loan + Math.max(0, r.nwHold)); });
+    mx *= 1.05;
+    const slot = (pR - pL) / N, bw = slot * 0.62;
+    const sxC = (i) => pL + slot * (i + 0.5);
+    const sy = (v) => pB - (v / mx) * (pB - pT);
+    let inner = "";
+    for (let i = 0; i <= 4; i++) {
+      const v = mx * i / 4, y = sy(v);
+      inner += `<line x1="${pL}" y1="${y.toFixed(1)}" x2="${pR}" y2="${y.toFixed(1)}" stroke="${C.grid}"/>`;
+      inner += `<text x="${pL - 6}" y="${(y + 3).toFixed(1)}" text-anchor="end" font-size="11" fill="${C.soft}">${axisTick(v)}</text>`;
+    }
+    inner += xLabels(N, (y) => sxC(y - 1), vh);
+    rows.forEach((r, i) => {
+      const x = sxC(i) - bw / 2;
+      const yl = sy(r.loan), hl = pB - yl;
+      inner += `<rect x="${x.toFixed(1)}" y="${yl.toFixed(1)}" width="${bw.toFixed(1)}" height="${Math.max(0, hl).toFixed(1)}" fill="${C.red}" fill-opacity="0.4"/>`;
+      const top = sy(r.loan + r.nwHold), yy = Math.min(yl, top), hh = Math.abs(top - yl);
+      inner += `<rect x="${x.toFixed(1)}" y="${yy.toFixed(1)}" width="${bw.toFixed(1)}" height="${Math.max(0, hh).toFixed(1)}" fill="${C.steel}"/>`;
+    });
+    inner += vline(sxC(tSel - 1), C.steelSoft, "", pT, pB);
+    inner += overlay(N, pL, pR, pT, pB);
+    return svg(vh, inner);
+  }
+
+  /* ---------- 数式行 ---------- */
+  function FRowHTML(name, note, symbol, subst, result, tone) {
+    return `<div class="frow"><div class="frow-name">${name}${note ? `<span class="frow-note">${note}</span>` : ""}</div>`
+      + `<div class="frow-body"><div class="fline"><span class="ftag">式</span><span class="fmath">${symbol}</span></div>`
+      + (subst ? `<div class="fline"><span class="ftag">代入</span><span class="fmath">${subst}</span></div>` : "")
+      + `<div class="fline"><span class="ftag eq">＝</span><span class="fres" style="color:${tone || C.ink}">${result}</span></div></div></div>`;
+  }
+  function buildConst() {
+    let d;
+    if (state.useDep) d = FRowHTML("減価償却費", "建物の価値の目減りを、毎年いくら経費にできるか",
+      `D = ${fr("建物価格", "47")}`, `D = ${fr(state.buildingMan.toLocaleString() + "万", "47")}`, `${fMan(sim.D)}円 / 年`, C.gold);
+    else d = FRowHTML("減価償却費", "今回は減価償却をしない前提", "D = 0（経費に入れない）", "", "0円 / 年", C.gold);
+    let m;
+    if (state.loanMethod === "ganri") m = FRowHTML("毎月のローン返済額", "元利均等：毎月の支払い合計が一定（最初は利息が多い）",
+      `M = ${fr("借入額 × 月利", "1 − (1+月利)<sup>−回数</sup>")}`,
+      `M = ${fr(`${fMan(sim.L0)}円 × ${(sim.monthlyRate * 100).toFixed(4)}%`, `1 − (1+${(sim.monthlyRate * 100).toFixed(4)}%)<sup>−${sim.nMonths}</sup>`)}`,
+      `${yen(sim.M).toLocaleString()}円 / 月（毎月一定）`, C.steel);
+    else m = FRowHTML("毎月のローン返済額", "元金均等：元金は一定・利息は残高とともに減るので、支払いは年々下がる",
+      `毎月 = 元金（${fr("借入額", "回数")}）＋ 残高 × 月利`,
+      `元金 = ${fr(fMan(sim.L0) + "円", sim.nMonths + "回")} ＝ ${yen(sim.monthlyPrincipal).toLocaleString()}円（毎月一定）`,
+      `初回 約${yen(sim.monthlyPrincipal + sim.L0 * sim.monthlyRate).toLocaleString()}円 → 年々減っていく`, C.steel);
+    return `<div class="const-box"><div class="const-title">毎年共通の定数</div>${d}${m}</div>`;
+  }
+  function buildCalcRows(tSel) {
+    const R = sim.rows[tSel - 1], p = state;
+    let h = "";
+    h += FRowHTML("① 実際に入る家賃", "満室の家賃から、空室のぶんを引いた額",
+      `R = 月家賃 × 12 × (1−空室率) × ${pw("(1+家賃変動率)", "t−1")}`,
+      `R = ${p.rentMan}万 × 12 × (1−${p.vacancy}%) × ${pw(`(1${p.rentChg >= 0 ? "+" : ""}${p.rentChg}%)`, tSel - 1)}`,
+      `${fMan(R.rent)}円`);
+    h += FRowHTML("② 物件の値段（その年）", "価格変動率で増えたり減ったり",
+      `V = 物件価格 × ${pw("(1+価格変動率)", "t")}`,
+      `V = ${p.priceMan}万 × ${pw(`(1${p.valueChg >= 0 ? "+" : ""}${p.valueChg}%)`, tSel)}`, `${fMan(R.V)}円`);
+    h += FRowHTML("③ 毎年の費用＋税金", "維持コストは物価で増え、固定資産税は評価替えで変わる",
+      `OPEX = 維持コスト${pw("₀×(1+物価)", "t−1")} ＋ 固定資産税${pw("₀×(1+変動)", "t−1")}`,
+      `OPEX = ${p.opexMan}万×${pw(`(1+${p.inflation}%)`, tSel - 1)} ＋ ${p.taxMan}万×${pw(`(1${p.taxChg >= 0 ? "+" : ""}${p.taxChg}%)`, tSel - 1)}`,
+      `${fMan(R.opex)}円（維持 ${fMan(R.opexRun)}＋税 ${fMan(R.propTax)}）`);
+    h += FRowHTML("④ ローン返済の中身", "返済を、利息（手数料）と元金（借金の返済）に分ける",
+      `年間 = Σ<sub>12ヶ月</sub>（利息 ＋ 元金）`,
+      tSel <= p.term ? `毎月：利息＝残高×月利。${p.loanMethod === "gankin" ? "元金は毎月一定。" : "元金＝返済額−利息。"}返したぶん残債が減る` : "すでに完済",
+      `利息 ${fMan(R.interest)}／元金 ${fMan(R.principal)}／合計 ${fMan(R.debt)}　→ 年末の残債 ${fMan(R.loan)}円`);
+    h += FRowHTML("⑤ 税金がかかる利益", p.useDep ? "ポイント：元金返済は引けない／減価償却は引ける" : "減価償却を引かないぶん、利益（＝税金）は高めに出ます",
+      p.useDep ? "課税所得 = R − 費用 − 利息 − 減価償却" : "課税所得 = R − 費用 − 利息",
+      p.useDep ? `= ${fMan(R.rent)} − ${fMan(R.opex)} − ${fMan(R.interest)} − ${fMan(R.dep)}` : `= ${fMan(R.rent)} − ${fMan(R.opex)} − ${fMan(R.interest)}`,
+      `${fMan(R.taxable)}円`, R.taxable < 0 ? C.teal : C.ink);
+    h += FRowHTML("⑥ 払う税金", R.taxable < 0 ? "赤字なら、損益通算で戻ってくる（マイナス＝還付）" : "上の利益にかかる税金",
+      "税金 = 課税所得 × 税率", `= ${fMan(R.taxable)} × ${p.incomeTax}%`, `${fMan(R.tax)}円`, R.tax < 0 ? C.teal : C.ink);
+    h += FRowHTML("⑦ 手元に残る現金", "その年に実際に残るお金（キャッシュフロー）",
+      "CF = R − 費用 − ローン返済 − 税金", `= ${fMan(R.rent)} − ${fMan(R.opex)} − ${fMan(R.debt)} − ${fMan(R.tax)}`,
+      `${fMan(R.cf)}円`, R.cf >= 0 ? C.teal : C.red);
+    h += FRowHTML("⑧ 純資産（持ち続けた場合）", "売らずに持っていれば、これがあなたの取り分",
+      "純資産 = 物件の値段 − ローン残高 ＋ たまった現金", `= ${fMan(R.V)} − ${fMan(R.loan)} ＋ ${fMan(R.accumCF)}`,
+      `<span style="font-size:17px">${fYen(R.nwHold)}</span>`, C.steel);
+    h += FRowHTML("⑨ 純資産（売った場合の手取り）", "売却の費用と税金を引いた、実際の手取り",
+      "= たまった現金 ＋（物件の値段 − 売却費 − 残ったローン − 譲渡税）",
+      `譲渡益 ${fMan(R.gain)} × ${fPct(R.cgRate, 2)} ＝ 譲渡税 ${fMan(R.cgTax)}`,
+      `<span style="font-size:17px">${fYen(R.nwReal)}</span>`, C.gold);
+    return h;
+  }
+
+  /* ---------- KPI / イベント / B/S / 用語集 ---------- */
+  function buildKpis() {
+    const k = [
+      [`${state.years}年後の純資産（保有）`, fYen(sim.finalHold), C.steel, "売らずに持ち続けた場合", "売らずに持ち続けた場合の、あなたの正味の資産。物件の評価額から残ったローンを引き、たまった現金を足したもの。"],
+      [`${state.years}年後の純資産（売却）`, fYen(sim.finalReal), sim.finalReal >= sim.equity ? C.teal : C.red, "その年に売って精算した手取り", "その年に売った場合に、税金や残ったローンを精算して、実際に手元へ残る金額。売却の費用と税金がかかるぶん、保有より少なめになります。"],
+      ["自己資金IRR", sim.eqIrr == null ? "—" : fPct(sim.eqIrr), (sim.eqIrr != null && sim.eqIrr >= 0) ? C.steel : C.red, `自己資金 ${fYen(sim.equity)} が ${sim.multiple.toFixed(2)}倍に`, "投じた自己資金（頭金＋諸費用）が、年あたり何%で増えたかの指標。預金金利のように『年◯%で回った』と読めます。"],
+      ["初年度のキャッシュフロー", fYen(sim.firstCF), sim.firstCF >= 0 ? C.ink : C.red, `表面利回り ${fPct(sim.grossYield)}`, "1年目に実際に手元へ残る現金（家賃 − 経費 − ローン返済 − 税金）。マイナスなら毎月の持ち出しがある状態です。"],
+    ];
+    return k.map(([label, value, tone, sub, inf]) => `<div class="kpi"><div class="kpi-label">${label}${info(inf)}</div><div class="kpi-value" style="color:${tone}">${value}</div><div class="kpi-sub">${sub}</div></div>`).join("");
+  }
+  function buildEvents() {
+    let s = "";
+    if (state.useDep) {
+      s += sim.deadCross
+        ? `<span class="ev red">デッドクロス ${sim.deadCross}年目 ${info("経費にできる減価償却より、経費にできない元金返済のほうが大きくなる時点。帳簿は黒字でも手元の現金が苦しくなりやすい。")}</span>`
+        : `<span class="ev muted">デッドクロスなし ${info("計算した年数の範囲では、減価償却より元金返済が大きくなる時点が来ない、という意味。")}</span>`;
+      s += `<span class="ev gold">減価償却終了 47年目 ${info("建物の減価償却が終わる年。これ以降は経費が減るので、税金が増えてキャッシュフローが悪化しがちです。")}</span>`;
+    } else {
+      s += `<span class="ev muted">減価償却なしで計算中 ${info("今回は減価償却を使わない前提です。経費が減るぶん税金は高めになりますが、デッドクロスは起きず、売却時の譲渡税はむしろ安くなります。")}</span>`;
+    }
+    s += `<span class="ev teal">完済 ${state.term}年目 ${info("ローンを返し終わる年。これ以降は返済がなくなり、手元に残るお金が大きく増えます。")}</span>`;
+    return s;
+  }
+  function chipData() {
+    return [{ y: 1, l: "1年目" },
+      sim.deadCross ? { y: sim.deadCross, l: `DC ${sim.deadCross}年` } : null,
+      state.term <= state.years ? { y: state.term, l: `完済 ${state.term}年` } : null,
+      { y: state.years, l: `最終 ${state.years}年` }].filter(Boolean);
+  }
+  function chipsHTML(tSel) {
+    return chipData().map((c) => `<button class="ychip${tSel === c.y ? " on" : ""}" data-year="${c.y}">${c.l}</button>`).join("");
+  }
+  function buildBS(tSel) {
+    const rows = sim.rows, R = rows[tSel - 1];
+    const bsPrevV = tSel > 1 ? rows[tSel - 2].V : sim.P;
+    const bsPrevEq = tSel > 1 ? rows[tSel - 2].nwHold : (sim.down - sim.acq);
+    const dV = R.V - bsPrevV, netIncome = R.taxable - R.tax, dEquity = R.nwHold - bsPrevEq;
+    const assetsTotal = R.V + R.accumCF, totFund = R.loan + R.nwHold;
+    const loanPct = totFund > 0 ? Math.max(0, Math.min(100, (R.loan / totFund) * 100)) : 0, eqPct = 100 - loanPct;
+    const unreal = R.V - R.book;
+    return `<div class="bs"><div class="bs-col"><div class="bs-side">借方（資産）＝ 持っているもの</div>`
+      + `<div class="bs-item"><span>物件（時価）</span><span>${fYen(R.V)}</span></div>`
+      + `<div class="bs-item"><span>現金（累積キャッシュフロー）</span><span style="color:${R.accumCF < 0 ? C.red : C.ink}">${fYen(R.accumCF)}</span></div>`
+      + `<div class="bs-total"><span>資産合計</span><span>${fYen(assetsTotal)}</span></div></div>`
+      + `<div class="bs-eq">＝</div>`
+      + `<div class="bs-col"><div class="bs-side">貸方（負債・純資産）＝ 元手の出どころ</div>`
+      + `<div class="bs-item"><span>ローン残高（負債）</span><span style="color:${C.red}">${fYen(R.loan)}</span></div>`
+      + `<div class="bs-item strong"><span>純資産（自分の取り分）</span><span>${fYen(R.nwHold)}</span></div>`
+      + `<div class="bs-total"><span>負債＋純資産</span><span>${fYen(R.loan + R.nwHold)}</span></div></div></div>`
+      + `<div class="lev"><div class="lev-bar"><div class="lev-debt" style="width:${loanPct}%"></div><div class="lev-eq" style="width:${eqPct}%"></div></div>`
+      + `<div class="lev-legend"><span>ローン（銀行のもの） ${loanPct.toFixed(0)}%</span><span>純資産（自分のもの） ${eqPct.toFixed(0)}%</span></div></div>`
+      + `<div class="artic"><div class="artic-title">P/L → B/S の橋渡し：なぜ純資産が前年から${dEquity >= 0 ? "増えた" : "減った"}のか</div>`
+      + `<div class="artic-eq">純資産の変化 <b>${fYen(dEquity)}</b> ＝ 物件評価額の変動 ${fYen(dV)} ＋ 当期純利益 ${fYen(netIncome)}${state.useDep ? ` ＋ 減価償却の戻し ${fYen(R.dep)}` : ""}</div>`
+      + `<div class="artic-note">損益計算書（P/L）で出した「当期純利益」が、そのまま貸借対照表（B/S）の「純資産」に積み上がっていく——これが2つの表が本質的に同じものである理由です。${state.useDep ? "減価償却は現金が出ていかない費用なので、時価ベースの純資産には響かず足し戻します。" : ""}</div></div>`
+      + `<div class="bs-book"><span><span class="lbl">時価</span>${fYen(R.V)}</span><span><span class="lbl">簿価</span>${fYen(R.book)}</span>`
+      + `<span><span class="lbl">含み${unreal >= 0 ? "益" : "損"}</span><span style="color:${unreal >= 0 ? C.teal : C.red}">${fYen(unreal)}</span></span>`
+      + `<div class="bs-book-note">含み損益＝時価−簿価。売却時の譲渡税は、この含み益にかかります（含み損なら課税なし）。${state.useDep ? "減価償却で簿価が下がるほど含み益がふくらみ、売却時の税金は重くなります。" : "減価償却オフだと簿価が下がらないので、含み益は出にくく、譲渡税も軽くなります。"}</div></div>`;
+  }
+  function glossHTML() {
+    return `<div class="gloss">${GLOSSARY.map(([t, d]) => `<div class="gloss-row"><div class="gloss-term">${t}</div><div class="gloss-def">${d}</div></div>`).join("")}</div>`;
+  }
+  function loanNote() {
+    return `棒＝その年の返済の中身（青＝元金、赤＝利息／左軸）。${state.loanMethod === "ganri"
+      ? "元利均等なので棒の高さ（年間の返済合計）はほぼ一定ですが、中身は年々『利息が減って元金が増える』形に変わります。"
+      : "元金均等なので棒の高さ（年間の返済合計）は年々小さくなります（元金が一定で、利息が減るため）。"}金色の線＝まだ残っているローン（残債／右軸）で、返済のたびに毎年減っていきます。`;
+  }
+  function disclaimer() {
+    return `※ 概算モデルです。${state.useDep
+      ? "減価償却あり（新築RC・定額法47年）で計算しています。"
+      : "いまは減価償却オフで計算しています（建物の価値の目減りを経費に入れない）。個人の確定申告では減価償却は原則“必須＝強制償却”で、オフにできるのは法人などに限られる点にご注意ください。"}`
+      + "固定資産税は初年度の実額×変動率で近似（3年ごとの評価替えや、新築軽減が切れるときの段差は簡略化）。譲渡税は5年以内39.63%／5年超20.315%で計算。取得費は物件価格＋諸費用の概算。実際の判断は税理士など専門家にご相談ください。投資助言ではありません。入力した数字は、この端末（ブラウザ）の中にだけ保存されます。";
+  }
+
+  /* ---------- 更新 ---------- */
+  function clampDeps() {
+    if (state.buildingMan > state.priceMan) state.buildingMan = state.priceMan;
+    if (state.downMan > state.priceMan) state.downMan = state.priceMan;
+    if (yr > state.years) yr = state.years; if (yr < 1) yr = 1;
+    ["buildingMan", "downMan"].forEach((k) => {
+      const rng = document.querySelector(`.main-range[data-key="${k}"]`);
+      const num = document.querySelector(`.main-num[data-key="${k}"]`);
+      if (rng) { rng.max = state.priceMan; rng.value = state[k]; }
+      if (num) num.value = state[k];
+    });
+    const bh = document.querySelector('[data-hint="buildingMan"]');
+    if (bh) bh.innerHTML = state.useDep
+      ? `売買契約書に書かれた建物分の金額。残り 土地 ${Math.max(0, state.priceMan - state.buildingMan).toLocaleString()}万円。建物だけが減価償却（価値の目減りを経費にできる仕組み）の対象です。`
+      : `売買契約書に書かれた建物分の金額。残り 土地 ${Math.max(0, state.priceMan - state.buildingMan).toLocaleString()}万円。※いまは減価償却オフのため、この金額は計算に使われません。`;
+  }
+  function updateAll() {
+    clampDeps();
+    sim = simulate(state);
+    byId("kpis").innerHTML = buildKpis();
+    byId("eventbar").innerHTML = buildEvents();
+    byId("svgCF").innerHTML = chartCF();
+    byId("svgLoan").innerHTML = chartLoan();
+    byId("loanNote").innerHTML = loanNote();
+    byId("constBox").innerHTML = buildConst();
+    byId("disc").innerHTML = disclaimer();
+    byId("ysl1").max = state.years; byId("ysl2").max = state.years;
+    byId("glossToggle").textContent = showGloss ? "▾ 用語の意味を閉じる" : "▸ わからない言葉があれば開く｜用語の意味";
+    byId("glossBody").innerHTML = showGloss ? glossHTML() : "";
+    updateYear();
+    save();
+  }
+  function updateYear() {
+    const tSel = curYear();
+    byId("svgNW").innerHTML = chartNW(tSel);
+    byId("svgBS").innerHTML = chartBS(tSel);
+    byId("bsCur").innerHTML = `<b>${tSel}年目</b>のスナップショット`;
+    byId("calcCur").innerHTML = `<b>${tSel}年目</b>の計算過程`;
+    byId("bsSnap").innerHTML = buildBS(tSel);
+    byId("calcRows").innerHTML = buildCalcRows(tSel);
+    byId("ypick1").innerHTML = chipsHTML(tSel);
+    byId("ypick2").innerHTML = chipsHTML(tSel);
+    const a = byId("ysl1"), b = byId("ysl2"); if (a) a.value = tSel; if (b) b.value = tSel;
+    save();
+  }
+  function scheduleAll() { if (raf) cancelAnimationFrame(raf); raf = requestAnimationFrame(() => { raf = null; updateAll(); }); }
+
+  /* ---------- マウント ---------- */
+  function resultsSkeleton() {
+    return `<main class="results">`
+      + `<div style="display:flex;justify-content:flex-end;margin-bottom:-4px"><button id="resetBtn" class="ychip">初期値に戻す</button></div>`
+      + `<div id="kpis" class="kpi-grid"></div>`
+      + `<div id="eventbar" class="eventbar"></div>`
+      + `<div class="panel"><div class="panel-head"><h3>純資産の推移</h3><div class="legend"><i style="background:${C.steel}"></i>保有<i style="background:${C.gold};margin-left:12px"></i>売却時</div></div><div id="svgNW"></div><div class="chart-note">青い面 ＝ 持ち続けた場合の純資産。金色の点線 ＝ その年に売ったときの手取り。点線が下なのは、売ると費用と税金がかかるためです。グラフ内をタップすると、その年が下のB/S・計算に反映されます。</div></div>`
+      + `<div class="panel"><div class="panel-head"><h3>1年ごとに手元へ残る現金（キャッシュフロー）</h3><div class="legend"><i style="background:${C.teal}"></i>プラス<i style="background:${C.red};margin-left:12px"></i>マイナス（持ち出し）</div></div><div id="svgCF"></div></div>`
+      + `<div class="panel"><div class="panel-head"><h3>ローン残高と返済の内訳</h3><div class="legend"><i style="background:${C.steel}"></i>元金<i style="background:${C.red};margin-left:12px"></i>利息<i style="background:${C.gold};margin-left:12px"></i>残債</div></div><div id="svgLoan"></div><div class="chart-note" id="loanNote"></div></div>`
+      + `<div class="panel"><div class="panel-head"><h3>貸借対照表（B/S）</h3><div class="yearpick" id="ypick1"></div></div>`
+      + `<div class="calc-intro">いまの計算は「1年ごとのもうけ」を積み上げる損益計算書（P/L）の発想です。同じ数字を「ある時点の財産の状態」として切り直したのが、この貸借対照表（B/S）。<b>資産 ＝ 負債 ＋ 純資産</b> で必ず釣り合います。</div>`
+      + `<input class="yslider" id="ysl1" type="range" min="1" step="1"><div class="calc-cur" id="bsCur"></div><div id="bsSnap"></div>`
+      + `<div class="panel-subtitle">B/Sの時系列：総資産のうち「ローン（赤）」が減り「純資産（青）」が増えていく</div><div id="svgBS"></div></div>`
+      + `<div class="panel"><button class="gloss-toggle" id="glossToggle"></button><div id="glossBody"></div></div>`
+      + `<div class="panel calc"><div class="panel-head"><h3>計算をたどる</h3><div class="yearpick" id="ypick2"></div></div>`
+      + `<div class="calc-intro">数式が苦手なら、ここは読み飛ばしてOK。グラフと用語集だけでも十分わかります。年を選ぶと、その年の数字の出どころを順番に表示します。</div>`
+      + `<input class="yslider" id="ysl2" type="range" min="1" step="1"><div class="calc-cur" id="calcCur"></div><div id="constBox"></div><div id="calcRows"></div></div>`
+      + `<p class="disclaimer" id="disc"></p></main>`;
+  }
+  const HEADER = `<header class="hdr"><div class="eyebrow">新築 RC マンション / 純資産シミュレーション</div><h1>はじめての不動産投資、純資産はどう増える？</h1><p class="lead">鉄筋コンクリート（RC）の新築に絞ったシミュレーターです。専門用語には<span class="qmark">?</span>マークが付いていて、タップすると意味が出ます。</p></header>`;
+  const INTRO = `<div class="intro"><div class="intro-title">このシミュレーターの考え方</div><ol class="intro-steps"><li><b>自分のお金（自己資金）</b>を頭金と諸費用に使って物件を買う。</li><li>入居者からの<b>家賃</b>で、ローンの返済や経費・税金を払う。</li><li>残ったお金（<b>キャッシュフロー</b>）が毎年たまり、同時に<b>ローンも減っていく</b>。</li><li>結果として「物件の価値 − 残ったローン ＋ たまった現金」＝<b>純資産</b>が育つ。</li></ol><div class="intro-foot">下のグラフは、この純資産が何年でどう増える（または減る）かを表しています。</div></div>`;
+
+  function rebuildControls() { byId("controls").innerHTML = controlsHTML(); }
+  function mount() {
+    const root = byId("root");
+    root.innerHTML = `<style>${CSS}</style>` + HEADER + INTRO
+      + `<div class="layout"><aside class="controls" id="controls">${controlsHTML()}</aside>${resultsSkeleton()}</div>`;
+    updateAll();
+  }
+
+  /* ---------- イベント委譲 ---------- */
+  document.addEventListener("input", (e) => {
+    const t = e.target;
+    if (t.classList && (t.classList.contains("main-range") || t.classList.contains("main-num"))) {
+      const k = t.dataset.key; let v = parseFloat(t.value); if (isNaN(v)) v = 0; state[k] = v;
+      const sel = t.classList.contains("main-range") ? `.main-num[data-key="${k}"]` : `.main-range[data-key="${k}"]`;
+      const other = document.querySelector(sel); if (other && other !== t) other.value = t.value;
+      scheduleAll();
+    } else if (t.classList && t.classList.contains("yslider")) {
+      yr = parseInt(t.value) || 1; updateYear();
+    }
+  });
+  document.addEventListener("change", (e) => {
+    const t = e.target;
+    if (t.classList && t.classList.contains("chk")) { state[t.dataset.key] = t.checked; updateAll(); }
+  });
+  document.addEventListener("click", (e) => {
+    const seg = e.target.closest(".seg-btn");
+    if (seg) { state.loanMethod = seg.dataset.loan; document.querySelectorAll(".seg-btn").forEach((b) => b.classList.toggle("on", b.dataset.loan === state.loanMethod)); updateAll(); return; }
+    const chip = e.target.closest(".ychip");
+    if (chip && chip.dataset.year) { yr = parseInt(chip.dataset.year) || 1; updateYear(); return; }
+    const hit = e.target.closest(".yhit");
+    if (hit) { yr = parseInt(hit.dataset.year) || 1; updateYear(); return; }
+    if (e.target.id === "glossToggle") { showGloss = !showGloss; byId("glossToggle").textContent = showGloss ? "▾ 用語の意味を閉じる" : "▸ わからない言葉があれば開く｜用語の意味"; byId("glossBody").innerHTML = showGloss ? glossHTML() : ""; save(); return; }
+    if (e.target.id === "resetBtn") { state = Object.assign({}, BASE); yr = 1; showGloss = false; rebuildControls(); updateAll(); return; }
+    const ib = e.target.closest(".info-btn");
+    document.querySelectorAll(".info-pop").forEach((p) => p.remove());
+    if (ib) { e.stopPropagation(); const sp = document.createElement("span"); sp.className = "info-pop"; sp.textContent = ib.dataset.info; ib.parentNode.appendChild(sp); }
+  });
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", mount);
+  else mount();
+})();
+
+</script>
+</body>
+</html>
